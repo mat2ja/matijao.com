@@ -7,20 +7,28 @@ const year = ref(new Date().getFullYear())
 </script>
 
 <template>
-  <footer mt-auto z-100 backdrop-blur class="bg-default-50/20 dark:bg-default-9/20 text-stone-800 dark:text-stone-300">
-    <div text-xs font-mono px-4 py-0.5 flex items-center justify-between>
-      <div flex items-center gap-1>
-        <p flex items-center>
-          <span text-lg mr-1>&copy;</span> {{ year }} Matija Osrečki
+  <footer z-100>
+    <div text-xs font-mono flex items-center justify-between text-default-700 dark:text-default-300>
+      <div flex items-center gap-1 class="footer-statusbar" rounded-tr-full>
+        <p
+          flex items-center
+        >
+          <span class="scale-135" mr-1 h-max>&copy;</span> {{ year }} Matija Osrečki
         </p>
+
+        &middot;
+
+        <NuxtLink
+          href="https://github.com/mat2ja/matijao.me"
+          target="_blank"
+          hover:underline
+          @click.stop
+        >
+          code
+        </NuxtLink>
       </div>
-      <div flex items-center justify-end gap-1.5>
-        <!-- <p flex items-center gap-1>
-        Matija Osrečki <span font-medium text-base>&copy;</span>
-      </p>
 
-      &middot; -->
-
+      <div flex items-center justify-end gap-1.5 bg-red h-full class="footer-statusbar" rounded-tl-full>
         <p>
           <Icon name="circle-flags:hr" text-11px />
           zagreb, croatia
@@ -29,7 +37,9 @@ const year = ref(new Date().getFullYear())
         &middot;
 
         <template v-if="weather">
-          <div flex items-center gap-1 lowercase>
+          <div
+            flex items-center gap-1 lowercase
+          >
             <img :src="weather.image" alt="" h-3ch ml--1 mr-0>
             <p>{{ Math.round(temperature) }}&deg;,</p>
 
@@ -62,3 +72,9 @@ const year = ref(new Date().getFullYear())
     </div>
   </footer>
 </template>
+
+<style lang="postcss" scoped>
+.footer-statusbar {
+  @apply px-3 py-1 backdrop-blur bg-default-50/20 dark:bg-default-9/20;
+}
+</style>
