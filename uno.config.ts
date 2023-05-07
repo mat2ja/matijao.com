@@ -37,6 +37,7 @@ export default defineConfig({
     transformerVariantGroup(),
   ],
   shortcuts: {
-    row: 'w-full max-w-5xl mx-auto px-5 sm:px-8',
+    'row': 'w-full max-w-5xl mx-auto px-5 sm:px-8',
+    'text-dimmed': 'text-stone-7 dark:text-stone-4',
   },
 })

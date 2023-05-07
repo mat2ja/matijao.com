@@ -32,7 +32,7 @@ const items = ref([{
         </nav>
       </aside>
 
-      <div flex-1 overflow-y-auto>
+      <div flex-1 overflow-y-auto pb-10>
         <slot />
       </div>
     </div>

@@ -55,14 +55,13 @@ const weatherDescription = computed(() => {
   <footer mt-auto z-100 backdrop-blur class="bg-stone-50/20 dark:bg-stone-9/20">
     <div px-4 flex items-center justify-end gap-1 py-0.5 text-xs font-mono>
       <p>
+        <Icon name="circle-flags:hr" text-11px />
         zagreb, croatia
       </p>
+
       &middot;
-      <p>
-        {{ formattedTime }}
-      </p>
+
       <template v-if="currentWeather">
-        &middot;
         <div flex items-center gap-1>
           <!-- <Icon name="ph:sun-duotone" text-base /> -->
           <img :src="weatherDescription.image" alt="" h-3ch>
@@ -70,7 +69,14 @@ const weatherDescription = computed(() => {
 
           <p>{{ weatherDescription.description }}</p>
         </div>
+
+        &middot;
       </template>
+
+      <p>
+        {{ formattedTime }}
+      </p>
+
       &middot;
 
       <Icon name="logos:nuxt-icon" text-sm />

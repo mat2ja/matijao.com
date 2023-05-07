@@ -48,13 +48,13 @@ const calculateDuration = (from: Date, to: Date | null) => {
           >
             {{ job.company.name }}
           </NuxtLink>
-          <span>•</span>
-          <span text-stone-7 dark:text-stone-4>{{ job.company.location }}</span>
+          &bull;
+          <span text-dimmed>{{ job.company.location }}</span>
         </div>
 
-        <div text-stone-7 dark:text-stone-4 text-sm flex items-center gap-2 ml="0.5">
+        <div text-dimmed text-sm flex items-center gap-2 ml="0.5">
           <span>{{ formatDate(job.from) }} &ndash; {{ job.to ? formatDate(job.to) : 'Present' }}</span>
-          <span>•</span>
+          &bull;
           <span>{{ calculateDuration(job.from, job.to) }}</span>
         </div>
       </div>
