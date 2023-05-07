@@ -2,13 +2,20 @@
 const items = ref([{
   name: 'Home',
   path: '/',
-}, {
+},
+{
   name: 'About',
   path: '/about',
-}, {
+},
+{
+  name: 'Projects',
+  path: '/projects',
+},
+{
   name: 'Blog',
   path: '/blog',
-}, {
+},
+{
   name: 'Contact',
   path: '/contact',
 }])
@@ -21,7 +28,7 @@ const items = ref([{
         v-for="(item, i) in items"
         :key="i"
         :to="item.path"
-        py-1 px-3 rounded-lg lowercase
+        py-1 px-2.5 rounded-lg lowercase
         class="text-stone-4 dark:text-stone-5 hover:(text-stone-8 dark:text-stone-2)"
         active-class="bg-stone-2/40 dark:bg-stone-8 !text-stone-8 !dark:text-stone-2"
       >

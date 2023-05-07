@@ -3,6 +3,8 @@ module.exports = {
   rules: {
     'vue/dot-location': 'off',
     'vue/comma-dangle': 'off',
+    'antfu/top-level-function': 'off',
+    'vue/space-infix-ops': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
   },

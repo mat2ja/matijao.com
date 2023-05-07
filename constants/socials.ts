@@ -1,14 +1,6 @@
-type SocialLinkModel = {
-  label: string
-  username: string
-  icon: string
-  href?: string
-  to?: string
-  color?: string
-  colorDark?: string
-}
+import type { SocialLink } from '~/models'
 
-export const socials: Record<string, SocialLinkModel> = {
+export const socials: Record<string, SocialLink> = {
   github: {
     label: 'GitHub',
     username: '@mat2ja',

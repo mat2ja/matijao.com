@@ -1,54 +1,6 @@
 <script lang="ts" setup>
-import weatherDescriptionJson from '~/constants/weather-description.json'
-
-const now = useNow({ interval: 1000 })
-
-const formattedTime = computed(() => {
-  return Intl.DateTimeFormat('en-us', {
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    hour12: false,
-    timeZone: 'Europe/Zagreb',
-  }).format(now.value)
-})
-
-export type WeatherResponse = {
-  latitude: number
-  longitude: number
-  generationtime_ms: number
-  utc_offset_seconds: number
-  timezone: string
-  timezone_abbreviation: string
-  elevation: number
-  current_weather: CurrentWeather
-}
-
-export type CurrentWeather = {
-  temperature: number
-  windspeed: number
-  winddirection: number
-  weathercode: number
-  is_day: number
-  time: string
-}
-
-const { data: weatherData } = await useFetch<WeatherResponse>('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true')
-
-const currentWeather = computed(() => {
-  return weatherData.value?.current_weather
-})
-const weatherCode = computed(() => {
-  return currentWeather.value?.weathercode
-})
-const weatherDescription = computed(() => {
-  if (!weatherCode.value)
-    return
-  if (!currentWeather.value)
-    return
-
-  return weatherDescriptionJson[weatherCode.value][currentWeather.value.is_day ? 'day' : 'night']
-})
+const { formattedTime } = useClock()
+const { weather, temperature } = await useWeatherInfo()
 </script>
 
 <template>
@@ -67,12 +19,12 @@ const weatherDescription = computed(() => {
 
       &middot;
 
-      <template v-if="currentWeather">
+      <template v-if="weather">
         <div flex items-center gap-1 lowercase>
-          <img :src="weatherDescription.image" alt="" h-3ch ml--1 mr-0>
-          <p>{{ Math.round(currentWeather.temperature) }}&deg;,</p>
+          <img :src="weather.image" alt="" h-3ch ml--1 mr-0>
+          <p>{{ Math.round(temperature) }}&deg;,</p>
 
-          <p>{{ weatherDescription.description }}</p>
+          <p>{{ weather.description }}</p>
         </div>
 
         &middot;

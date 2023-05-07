@@ -1,6 +1,6 @@
 type ShortcutConfig = Record<string, { key: string; handler: () => void }>
 
-export function useShortcuts(config: ShortcutConfig) {
+export const useShortcuts = (config: ShortcutConfig) => {
   const keys = useMagicKeys()
 
   type ShortcutsThing = keyof typeof config
@@ -15,7 +15,7 @@ export function useShortcuts(config: ShortcutConfig) {
   defineShortcuts()
 }
 
-export function useGlobalShortcuts() {
+export const useGlobalShortcuts = () => {
   const { toggleDark } = useTheme()
 
   const config = {

@@ -1,9 +1,8 @@
-<!-- eslint-disable antfu/top-level-function -->
 <script lang="ts" setup>
 import { addMonths, differenceInMonths } from 'date-fns'
 import { jobs } from '~~/constants/jobs'
 
-function formatDate(date: Date) {
+const formatDate = (date: Date) => {
   return new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
     month: 'short',
