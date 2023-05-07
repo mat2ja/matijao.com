@@ -39,6 +39,8 @@ const openPdf = () => {
       <AboutEducation />
 
       <AboutCompetitions />
+
+      <AboutSkills />
     </div>
   </div>
 </template>

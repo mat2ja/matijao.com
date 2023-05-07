@@ -4,7 +4,7 @@
 
 <template>
   <div row>
-    <div flex-1 p-8 flex items-start gap-24 pt-42>
+    <div flex-1 p-8 flex items-start gap-18 pt-50>
       <NavMenu />
 
       <div flex-1 pb-14>

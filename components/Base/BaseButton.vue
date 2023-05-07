@@ -15,12 +15,12 @@ const variantClass = computed(() => {
 <template>
   <button
     v-if="!to"
-    flex gap-2 items-center justify-center py-2 px-3 rounded-lg class="text-sm hover:(ring-2) active:(scale-95)"
+    flex gap-2 items-center justify-center py-2 px-3 rounded-lg class="text-xs font-semibold hover:(ring-2) active:(scale-95)"
     :class="[variantClass]"
   >
     <div v-if="$slots.icon || icon" flex items-center>
       <slot name="icon">
-        <Icon v-if="icon" :name="icon" text-lg />
+        <Icon v-if="icon" :name="icon" text-base />
       </slot>
     </div>
 
