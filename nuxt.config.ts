@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true,
+    enabled: false,
   },
 
   unocss: {
@@ -37,6 +37,10 @@ export default defineNuxtConfig({
     ],
   },
 
+  css: [
+    '~/assets/styles/fonts.css',
+  ],
+
   postcss: {
     plugins: {
       'postcss-nesting': {},
@@ -50,13 +54,13 @@ export default defineNuxtConfig({
   robots: {
     rules: {
       UserAgent: '*',
-      Allow: '/',
+      Disallow: '/',
     },
   },
 
   app: {
     head: {
-      title: 'Nuxt Starter',
+      title: 'Matija Osrečki',
     },
   },
 })

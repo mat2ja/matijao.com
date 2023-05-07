@@ -36,4 +36,7 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
+  shortcuts: {
+    row: 'w-full max-w-5xl mx-auto px-5 sm:px-8',
+  },
 })
