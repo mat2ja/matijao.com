@@ -3,5 +3,9 @@
 </script>
 
 <template>
-  Blog
+  <div>
+    <h2 text-4xl font-display mb-5>
+      Blog
+    </h2>
+  </div>
 </template>

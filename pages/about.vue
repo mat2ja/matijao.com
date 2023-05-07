@@ -1,5 +1,10 @@
 <script lang="ts" setup>
+import ResumePDF from '/Resume.pdf'
 
+const openPdf = () => {
+  if (process.client)
+    window.open(ResumePDF, '_blank')
+}
 </script>
 
 <template>

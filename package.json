@@ -16,7 +16,8 @@
     "format": "eslint . --fix"
   },
   "dependencies": {
-    "pinia": "^2.0.35"
+    "pinia": "^2.0.35",
+    "slugify": "^1.6.6"
   },
   "devDependencies": {
     "@antfu/eslint-config": "0.38.6",

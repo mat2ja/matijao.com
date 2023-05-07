@@ -5,6 +5,7 @@ module.exports = {
     'vue/comma-dangle': 'off',
     'antfu/top-level-function': 'off',
     'vue/space-infix-ops': 'off',
+    'vue/space-unary-ops': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
   },
