@@ -1,13 +1,13 @@
 <script lang="ts" setup>
+const { isDark } = useTheme()
 </script>
 
 <template>
-  <div id="grain" overflow="hidden" />
+  <div id="grain" overflow="hidden" :class="[isDark ? 'opacity-10' : 'opacity-5']" />
 </template>
 
 <style scoped>
 #grain {
-  opacity: 5%;
   background-image: url('assets/images/grainy.png');
   background-repeat: repeat;
   position: fixed;
@@ -15,7 +15,7 @@
   left: -200%;
   height: 600%;
   top: -300%;
-  animation: home-grain 11s steps(10) infinite;
+  animation: home-grain 14s steps(10) infinite;
   pointer-events: none;
   z-index: 9999;
 }

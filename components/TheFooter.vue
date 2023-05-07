@@ -52,8 +52,14 @@ const weatherDescription = computed(() => {
 </script>
 
 <template>
-  <footer mt-auto z-100 backdrop-blur class="bg-stone-50/20 dark:bg-stone-9/20">
-    <div px-4 flex items-center justify-end gap-1 py-0.5 text-xs font-mono>
+  <footer mt-auto z-100 backdrop-blur class="bg-default-50/20 dark:bg-default-9/20 text-stone-800 dark:text-stone-300">
+    <div px-4 flex items-center justify-end gap-1.5 py-0.5 text-xs font-mono>
+      <!-- <p flex items-center gap-1>
+        Matija Osrečki <span font-medium text-base>&copy;</span>
+      </p>
+
+      &middot; -->
+
       <p>
         <Icon name="circle-flags:hr" text-11px />
         zagreb, croatia
@@ -62,9 +68,8 @@ const weatherDescription = computed(() => {
       &middot;
 
       <template v-if="currentWeather">
-        <div flex items-center gap-1>
-          <!-- <Icon name="ph:sun-duotone" text-base /> -->
-          <img :src="weatherDescription.image" alt="" h-3ch>
+        <div flex items-center gap-1 lowercase>
+          <img :src="weatherDescription.image" alt="" h-3ch ml--1 mr-0>
           <p>{{ Math.round(currentWeather.temperature) }}&deg;,</p>
 
           <p>{{ weatherDescription.description }}</p>
