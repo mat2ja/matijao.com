@@ -16,7 +16,7 @@ const images = computed(() => {
 <template>
   <div v-if="project" row>
     <div>
-      <BaseButton icon="ph:arrow-left" variant="blank" @click="navigateTo({ name: 'projects' })">
+      <BaseButton icon="ph:arrow-left-bold" variant="blank" @click="navigateTo({ name: 'projects' })">
         Back
       </BaseButton>
 
@@ -30,7 +30,7 @@ const images = computed(() => {
             v-if="project.repo"
             :to="project.repo"
             external new-tab
-            icon="ph:code"
+            icon="ph:code-bold"
             icon-position="right"
           >
             Code
@@ -39,7 +39,7 @@ const images = computed(() => {
             v-if="project.url"
             :to="project.url"
             external new-tab
-            icon="ph:arrow-up-right"
+            icon="ph:arrow-up-right-bold"
             icon-position="right"
           >
             See live
@@ -61,11 +61,9 @@ const images = computed(() => {
     <div v-if="images?.length" mt-10>
       <div
         v-for="image in images"
-        :key="image" p-1.5
-        bg-black dark:bg-accent rounded-xl
-        overflow-hidden
+        :key="image"
       >
-        <div class="bg-black dark:(bg-accent)" overflow-hidden rounded-lg>
+        <div overflow-hidden rounded-xl border border-2 border-black dark:border-accent>
           <NuxtLink
             relative
             :to="image" target="_blank" external

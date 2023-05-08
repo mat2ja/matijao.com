@@ -33,14 +33,14 @@ const openProject = () => {
         <div relative flex justify-between items-center>
           <div flex items-center gap-3>
             <h3
-              line-clamp-1 font-sans font-semibold text-xl flex-1 flex items-start gap-4
+              line-clamp-1 font-sans font-semibold text-xl flex-1
               class="group-hover:underline"
             >
               {{ project.name }}
             </h3>
 
             <Icon
-              name="ph:arrow-right"
+              name="ph:arrow-right-bold"
               text-lg transition duration-250 text-accent
               class="invisible opacity-0 -translate-x-4 group-hover:(visible opacity-100 translate-x-0)"
             />
@@ -63,7 +63,7 @@ const openProject = () => {
               class="text-dimmed hover:text-current text-base"
               @click.stop
             >
-              <Icon name="ph:arrow-up-right" />
+              <Icon name="ph:arrow-up-right-bold" />
             </NuxtLink>
           </div>
         </div>

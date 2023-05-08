@@ -1,5 +1,10 @@
 export * from './weather'
 
+export type NavItem = {
+  name: string
+  path: string
+}
+
 export type Project = {
   name: string
   description: string
