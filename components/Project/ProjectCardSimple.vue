@@ -18,15 +18,10 @@ const openProject = () => {
 </script>
 
 <template>
-  <div
-    flex items-center justify-between relative
-    class="group"
-    h-full
-  >
+  <div flex items-center justify-between relative h-full class="group">
     <div
-      h-full
-      py-4 px-5 rounded-2xl cursor-pointer relative flex gap-4 w-full max-w-full md:max-w-lg
-      class="lg:translate-y-1 transition border-2 border-transparent bg-transparent dark:bg-default-8/40 hover:(sm:(!lg:translate-y-0 backdrop-blur-md) border-default-2/40 dark:border-default-8/40)"
+      h-full w-full max-w-full md:max-w-lg py-4 px-5 rounded-2xl cursor-pointer relative flex gap-4
+      class="lg:translate-y-1 transition border-2 border-transparent bg-transparent dark:bg-default-8/40 border-default-2/40 dark:border-default-8/40 hover:(lg:translate-y-0)"
       @click="openProject"
     >
       <div flex-1 flex flex-col gap-2>
@@ -34,7 +29,8 @@ const openProject = () => {
           <div flex items-center gap-3>
             <h3
               line-clamp-1 font-sans font-semibold text-xl flex-1
-              class="group-hover:underline"
+              transition duration-300
+              class="-mx-0.5 -my-0.5 py-0.5 pb-0.5 px-1 rounded-sm underline decoration-transparent decoration-offset-3 decoration-wavy group-hover:(!decoration-accent-400)"
             >
               {{ project.name }}
             </h3>

@@ -29,7 +29,7 @@ export const projects: Project[] = [
   },
   {
     name: 'matijao.com',
-    description: 'My portfolio site you are browsing at this very exact moment',
+    description: 'The site you are admiring right now.',
     tags: ['Nuxt', 'Vue', 'TypeScript', 'UnoCSS'],
     year: 2023,
     repo: 'https://github.com/mat2ja/matijao.me',
@@ -59,7 +59,7 @@ export const projects: Project[] = [
   {
     name: 'MeetMia',
     description: 'Cake shop concept project',
-    tags: ['Vue', 'Vite', 'TypeScript', 'SASS'],
+    tags: ['Vue', 'Vite', 'TypeScript', 'SCSS'],
     year: 2021,
     repo: 'https://github.com/mat2ja/meet-mia',
     url: 'https://meet-mia.surge.sh/',
@@ -71,7 +71,7 @@ export const projects: Project[] = [
   {
     name: 'Comet',
     description: 'Video streaming platform mockup.',
-    tags: ['HTML', 'SASS', 'JavaScript'],
+    tags: ['HTML', 'SCSS', 'JavaScript'],
     year: 2020,
     repo: 'https://github.com/mat2ja/comet',
     url: 'https://comet-blush.vercel.app',
@@ -86,7 +86,6 @@ export const extensions: Project[] = [
     year: 2023,
     url: 'https://marketplace.visualstudio.com/items?itemName=matijao.vue-nuxt-snippets',
     tags: ['Deno', 'TypeScript'],
-    vscode: true,
   },
   {
     name: 'Modern JavaScript Snippets',
@@ -94,7 +93,6 @@ export const extensions: Project[] = [
     year: 2023,
     url: 'https://marketplace.visualstudio.com/items?itemName=matijao.modern-js-snippets',
     tags: ['Deno', 'TypeScript'],
-    vscode: true,
   },
   {
     name: 'URL Editor for Chrome',
@@ -111,7 +109,6 @@ export const extensions: Project[] = [
     url: undefined,
     tags: ['React'],
     wip: true,
-    raycast: true,
   },
   {
     name: 'pnpm.plugin.zsh',
@@ -147,5 +144,4 @@ export const starters: Project[] = [
     url: 'https://vue-anu-starter.vercel.app/',
     tags: ['Vue', 'UnoCSS'],
   },
-
 ]
