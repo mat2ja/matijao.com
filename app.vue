@@ -4,7 +4,7 @@ useGlobalShortcuts()
 
 <template>
   <Html lang="en">
-    <Body min-h-screen font-sans bg-default-50 text-default-8 dark:(bg-default-9 text-default-2)>
+    <Body min-h-screen font-sans text-primary bg-default-50 dark:bg-default-9>
       <GrainCover />
       <NuxtLayout>
         <NuxtPage />

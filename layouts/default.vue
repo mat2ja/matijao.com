@@ -7,7 +7,7 @@
     <div flex-1 p-8 flex items-start gap-18 pt-50>
       <NavMenu />
 
-      <div flex-1 pb-14>
+      <div flex-1 pb-24>
         <slot />
       </div>
     </div>

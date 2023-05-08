@@ -10,8 +10,8 @@ const slug = ref(slugify(project.name))
 
 const hasLink = computed(() => project.repo || project.url)
 const openProject = () => {
-  // if (hasLink.value && process.client)
-  // navigateTo(`/projects/${slug.value}`)
+  if (hasLink.value)
+    navigateTo(`/projects/${slug.value}`)
 
   // TODO: create a test that checks if project pages are in line with slugified project names
 }
@@ -40,7 +40,7 @@ const openProject = () => {
             </h3>
 
             <Icon
-              name="ph:arrow-right-bold"
+              name="ph:arrow-right"
               text-lg transition duration-250 text-accent
               class="invisible opacity-0 -translate-x-4 group-hover:(visible opacity-100 translate-x-0)"
             />
@@ -48,24 +48,22 @@ const openProject = () => {
 
           <div text-sm flex items-center gap-3 invisible group-hover:visible>
             <NuxtLink
-              v-if="project.url"
-              :href="project.url"
-              target="_blank"
-              class="text-dimmed hover:text-current"
-              text-base
-              @click.stop
-            >
-              <Icon name="ph:arrow-up-right-bold" />
-            </NuxtLink>
-            <NuxtLink
               v-if="project.repo"
               :href="project.repo"
               target="_blank"
-              class="text-dimmed hover:text-current"
-              text-base
+              class="text-dimmed hover:text-current text-base"
               @click.stop
             >
               <Icon name="ph:code-bold" />
+            </NuxtLink>
+            <NuxtLink
+              v-if="project.url"
+              :href="project.url"
+              target="_blank"
+              class="text-dimmed hover:text-current text-base"
+              @click.stop
+            >
+              <Icon name="ph:arrow-up-right" />
             </NuxtLink>
           </div>
         </div>

@@ -1,25 +1,27 @@
 <script lang="ts" setup>
-defineProps<{
+withDefaults(defineProps<{
   icon?: string
+  iconPosition?: 'left' | 'right'
   label?: string
   to?: string
   external?: boolean
   newTab?: boolean
-}>()
-
-const variantClass = computed(() => {
-  return 'text-default-8 dark:text-default-3 bg-[#EFEEED] dark:bg-default-8 hover:(ring-default-2 dark:ring-default-7)'
+  variant: 'primary' | 'blank'
+}>(), {
+  variant: 'primary',
+  iconPosition: 'left',
 })
+
 </script>
 
 <template>
   <button
     v-if="!to"
-    flex gap-2 items-center justify-center py-2 px-3 rounded-lg class="text-xs font-semibold hover:(ring-2) active:(scale-95)"
-    :class="[variantClass]"
+    class="btn"
+    :class="[variant]"
   >
-    <div v-if="$slots.icon || icon" flex items-center>
-      <slot name="icon">
+    <div v-if="($slots.icon || icon) && iconPosition === 'left'" flex items-center>
+      <slot name="left">
         <Icon v-if="icon" :name="icon" text-base />
       </slot>
     </div>
@@ -27,6 +29,12 @@ const variantClass = computed(() => {
     <slot>
       {{ label }}
     </slot>
+
+    <div v-if="($slots.icon || icon) && iconPosition === 'right'" flex items-center>
+      <slot name="right">
+        <Icon v-if="icon" :name="icon" text-base />
+      </slot>
+    </div>
   </button>
 
   <NuxtLink
@@ -34,16 +42,38 @@ const variantClass = computed(() => {
     :to="to"
     :external="external"
     :target="newTab ? '_blank' : '_self'"
-    flex gap-2 items-center justify-center p="y-1 x-3" rounded-lg class="text-sm hover:(ring-2) active:(scale-95)"
-    :class="[variantClass]"
+    class="btn"
+    :class="[variant]"
   >
-    <div v-if="$slots.icon || icon" flex items-center>
-      <slot name="icon">
-        <Icon v-if="icon" :name="icon" text-lg />
+    <div v-if="($slots.icon || icon) && iconPosition === 'left'" flex items-center>
+      <slot name="left">
+        <Icon v-if="icon" :name="icon" text-base />
       </slot>
     </div>
+
     <slot>
       {{ label }}
     </slot>
+
+    <div v-if="($slots.icon || icon) && iconPosition === 'right'" flex items-center>
+      <slot name="right">
+        <Icon v-if="icon" :name="icon" text-base />
+      </slot>
+    </div>
   </NuxtLink>
 </template>
+
+
+<style lang="postcss" scoped>
+.btn {
+  @apply flex gap-2 items-center justify-center py-2 px-3 rounded-lg text-xs font-semibold hover:(ring-2 ring-transparent) active:(scale-95) focus:(outline-none);
+
+  &.primary {
+    @apply text-default-8 dark:text-default-3 bg-[#EFEEED] dark:bg-default-8 hover:(ring-default-2 dark:ring-default-7);
+  }
+
+  &.blank {
+    @apply text-dimmed hover:(bg-[#EFEEED] dark:bg-default-8 text-primary) focus:(ring-default-2 dark:ring-default-7);
+  }
+}
+</style>
