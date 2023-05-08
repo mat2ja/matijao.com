@@ -18,7 +18,8 @@ const items = ref([{
 {
   name: 'Contact',
   path: '/contact',
-}])
+},
+])
 </script>
 
 <template>
