@@ -11,7 +11,6 @@ withDefaults(defineProps<{
   variant: 'primary',
   iconPosition: 'left',
 })
-
 </script>
 
 <template>

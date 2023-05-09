@@ -24,6 +24,7 @@ const isLinkActive = (item: NavItem) => {
         :key="i"
         :to="item.path"
         py-1 px-2.5 rounded-lg lowercase
+        transition
         class="text-stone-4 dark:text-stone-5 hover:(text-stone-8 dark:text-stone-2)"
         :class="{
           'link-active': isLinkActive(item),

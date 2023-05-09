@@ -56,12 +56,12 @@ const list = [
           </div>
         </div>
       </div>
-      <div lt-lg:hidden absolute right-0 class="top-50% right-20 translate-y--50% group">
+      <div lt-md:hidden absolute right-0 class="top-50% right-20 translate-y--50% group">
         <img
           translate-y-8
           translate-x-10
           src="/mc2-decode.jpeg"
-          width="280px"
+          width="280"
           rotate-3
           rounded-2xl
           class="group-hover:opacity-50 !hover:opacity-100"
@@ -70,7 +70,7 @@ const list = [
         <img
           translate-y--10
           src="/mc2-win.jpeg"
-          width="280px"
+          width="280"
           rotate-6
           class="group-hover:opacity-50 !hover:opacity-100"
           rounded-2xl
