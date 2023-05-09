@@ -8,7 +8,10 @@ const year = ref(new Date().getFullYear())
 
 <template>
   <footer z-100>
-    <div text-xs font-mono lt-md:py-5 flex="~ col md:row" items-center justify-between text-default-700 dark:text-default-300>
+    <div
+      text-xs font-mono py-8 md:py-5
+      flex="~ col md:row" items-center justify-between text-default-700 dark:text-default-300
+    >
       <div flex items-center gap-1 class="footer-statusbar" rounded-r-full>
         <p flex items-center>
           <span class="scale-135" mr-1 h-max>&copy;</span> {{ year }} Matija Osrečki
@@ -74,6 +77,6 @@ const year = ref(new Date().getFullYear())
 <style lang="postcss" scoped>
 .footer-statusbar {
   /* @apply px-3 py-1 backdrop-blur-sm bg-gradient-to-t from-bg-default-50/20 dark:from-bg-default-9/20 to-transparent; */
-  @apply px-3 py-2 md:py-1 backdrop-blur-sm bg-gradient-to-t from-bg-default-50/20 dark:from-bg-default-9/20 to-transparent;
+  @apply px-3 py-3 md:py-1 backdrop-blur-sm bg-gradient-to-t from-bg-default-50/20 dark:from-bg-default-9/20 to-transparent;
 }
 </style>
