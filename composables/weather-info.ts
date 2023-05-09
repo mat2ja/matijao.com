@@ -17,6 +17,7 @@ export const useWeatherInfo = async () => {
       return
     if (!currentWeather.value)
       return
+
     return (weatherDescriptionJson as WeatherDescription)[weatherCode.value][currentWeather.value.is_day ? 'day' : 'night']
   })
 

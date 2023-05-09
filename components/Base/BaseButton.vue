@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 withDefaults(defineProps<{
+  variant?: 'primary' | 'blank'
   icon?: string
   iconPosition?: 'left' | 'right'
   label?: string
   to?: string
   external?: boolean
   newTab?: boolean
-  variant: 'primary' | 'blank'
 }>(), {
   variant: 'primary',
   iconPosition: 'left',

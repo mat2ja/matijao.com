@@ -32,18 +32,18 @@ const schools = [
         </h6>
 
         <div flex items-center gap-2>
-          <NuxtLink :to="school.url" target="_blank" external hyperlink>
+          <NuxtLink :to="school.url" target="_blank" external hyperlink transition>
             {{ school.name }}
           </NuxtLink>
           <span text-opaque>|</span>
           <span text-xs font-bold uppercase>{{ school.nameShort }}</span>
         </div>
 
-        <p text-dimmed text-sm>
+        <p text-dimmed>
           {{ school.field }}
         </p>
 
-        <div text-dimmed text-sm flex items-center gap-2>
+        <div text-dimmed flex items-center gap-2>
           <span>{{ school.from }} &ndash; {{ school.to }}</span>
           &bull;
           <span>{{ school.location }}</span>

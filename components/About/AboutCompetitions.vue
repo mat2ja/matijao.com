@@ -35,7 +35,7 @@ const list = [
         </div>
 
         <div flex items-center gap-2>
-          <NuxtLink :href="`/projects/${item.project.toLowerCase()}`" hyperlink>
+          <NuxtLink :href="`/projects/${item.project.toLowerCase()}`" hyperlink transition>
             {{ item.project }}
           </NuxtLink>
           <template v-if="item.additional">
