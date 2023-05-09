@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div row>
-    <div flex-1 py-8 pt="8 md:50" flex="~ col gap-10 md:(row gap-18)" items-start>
+  <div row flex flex-col justify-between flex-1 h-full>
+    <div grow py-8 pt="8 md:50" flex="~ col gap-10 md:(row gap-18)" items-start>
       <NavMenu />
 
       <div flex-1 pb-24>
@@ -12,6 +12,6 @@
       </div>
     </div>
 
-    <TheFooter fixed bottom-0 left-0 right-0 />
+    <TheFooter class="mt-auto lg:fixed bottom-0 left-0 right-0" />
   </div>
 </template>

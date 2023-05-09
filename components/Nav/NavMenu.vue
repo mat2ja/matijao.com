@@ -5,7 +5,7 @@ const items = ref<NavItem[]>([
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Projects', path: '/projects' },
-  { name: 'Blog', path: '/blog' },
+  // { name: 'Blog', path: '/blog' },
   { name: 'Contact', path: '/contact' },
 ])
 
@@ -17,7 +17,7 @@ const isLinkActive = (item: NavItem) => {
 </script>
 
 <template>
-  <aside w-max lg:sticky top-20>
+  <aside min-w-20 w-max lg:sticky top-20 lt-md:mx-auto>
     <nav flex="~ md:col" items-start>
       <NuxtLink
         v-for="(item, i) in items"

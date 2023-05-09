@@ -1,7 +1,7 @@
 <template>
   <div>
     <div relative>
-      <h2 text-3xl lg:text-6xl font-display mb="3 sm:5">
+      <h2 text-4xl lg:text-7xl font-display mb="3 sm:5">
         Matija Osrečki
       </h2>
 
@@ -36,6 +36,6 @@
       </div>
     </div>
 
-    <SVGCloud absolute top--5 right-60 z--1 />
+    <SVGCloud absolute top--5 right-30 z--1 />
   </div>
 </template>

@@ -6,7 +6,7 @@ useGlobalShortcuts()
   <Html lang="en">
     <Body min-h-screen font-sans text-primary bg-default-50 dark:bg-default-9>
       <GrainCover />
-      <NuxtLayout>
+      <NuxtLayout min-h-screen>
         <NuxtPage />
       </NuxtLayout>
     </Body>
