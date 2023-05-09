@@ -10,7 +10,7 @@
           Self-motivated front-end oriented software developer, very much in love with all things web development. Obsessed with Bitcoin.
         </p>
 
-        <div flex items-center gap-3 mt-6 class="group">
+        <div flex items-center gap-3 mt-6 class="group" w-fit>
           <NuxtLink
             href="https://github.com/mat2ja"
             external target="_blank"
@@ -36,6 +36,6 @@
       </div>
     </div>
 
-    <SVGCloud absolute top--5 right-30 z--1 />
+    <SVGCloud absolute top--5 right-40 z--1 />
   </div>
 </template>
