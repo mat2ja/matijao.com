@@ -24,35 +24,58 @@ const list = [
 
 <template>
   <AboutSection title="Competitions" icon="ph:trophy-duotone">
-    <div space-y-6 z-2>
-      <div v-for="(item, i) in list" :key="i" flex flex-col gap-1>
-        <div flex items-center gap-1>
-          <NuxtLink :to="item.url" target="_blank" external>
-            <h6 text-lg leading-snug font-semibold>
-              {{ item.name }}
-            </h6>
-          </NuxtLink>
-        </div>
+    <div flex justify-between items-center relative>
+      <div space-y-6 z-2>
+        <div v-for="(item, i) in list" :key="i" flex flex-col gap-1>
+          <div flex items-center gap-1>
+            <NuxtLink :to="item.url" target="_blank" external>
+              <h6 text-lg leading-snug font-semibold>
+                {{ item.name }}
+              </h6>
+            </NuxtLink>
+          </div>
 
-        <div flex items-center gap-2>
-          <NuxtLink :href="`/projects/${item.project.toLowerCase()}`" hyperlink transition>
-            {{ item.project }}
-          </NuxtLink>
-          <template v-if="item.additional">
-            <span text-opaque>|</span>
-            {{ item.additional }}
-          </template>
-        </div>
+          <div flex items-center gap-2>
+            <NuxtLink :href="`/projects/${item.project.toLowerCase()}`" hyperlink transition>
+              {{ item.project }}
+            </NuxtLink>
+            <template v-if="item.additional">
+              <span text-opaque>|</span>
+              {{ item.additional }}
+            </template>
+          </div>
 
-        <div flex items-center gap-2>
-          <p text-dimmed text-sm>
-            {{ item.description }}
-          </p>
-        </div>
+          <div flex items-center gap-2>
+            <p text-dimmed text-sm>
+              {{ item.description }}
+            </p>
+          </div>
 
-        <div text-dimmed text-sm flex items-center gap-2>
-          <span>{{ item.from }} &ndash; {{ item.to }}</span>
+          <div text-dimmed text-sm flex items-center gap-2>
+            <span>{{ item.from }} &ndash; {{ item.to }}</span>
+          </div>
         </div>
+      </div>
+      <div lt-lg:hidden absolute right-0 class="top-50% right-20 translate-y--50% group">
+        <img
+          translate-y-8
+          translate-x-10
+          src="/mc2-decode.jpeg"
+          width="280px"
+          rotate-3
+          rounded-2xl
+          class="group-hover:opacity-50 !hover:opacity-100"
+          transition
+        >
+        <img
+          translate-y--10
+          src="/mc2-win.jpeg"
+          width="280px"
+          rotate-6
+          class="group-hover:opacity-50 !hover:opacity-100"
+          rounded-2xl
+          transition
+        >
       </div>
     </div>
   </AboutSection>

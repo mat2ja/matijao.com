@@ -8,8 +8,8 @@ const year = ref(new Date().getFullYear())
 
 <template>
   <footer z-100>
-    <div text-xs font-mono flex items-center justify-between text-default-700 dark:text-default-300>
-      <div flex items-center gap-1 class="footer-statusbar" rounded-tr-full>
+    <div text-xs font-mono flex items-center justify-between text-default-700 dark:text-default-300 class="footer-statusbar">
+      <div flex items-center gap-1>
         <p
           flex items-center
         >
@@ -19,7 +19,7 @@ const year = ref(new Date().getFullYear())
         &middot;
 
         <NuxtLink
-          href="https://github.com/mat2ja/matijao.me"
+          href="https://github.com/mat2ja/matijao-v2"
           target="_blank"
           hover:underline
           @click.stop
@@ -28,7 +28,7 @@ const year = ref(new Date().getFullYear())
         </NuxtLink>
       </div>
 
-      <div flex items-center justify-end gap-1.5 bg-red h-full class="footer-statusbar" rounded-tl-full>
+      <div flex items-center justify-end gap-1.5 h-full>
         <p>
           <Icon name="circle-flags:hr" text-11px />
           zagreb, croatia
@@ -75,6 +75,7 @@ const year = ref(new Date().getFullYear())
 
 <style lang="postcss" scoped>
 .footer-statusbar {
-  @apply px-3 py-1 backdrop-blur bg-default-50/20 dark:bg-default-9/20;
+  /* @apply px-3 py-1 backdrop-blur-sm bg-gradient-to-t from-bg-default-50/20 dark:from-bg-default-9/20 to-transparent; */
+  @apply px-3 py-1 backdrop-blur-sm bg-gradient-to-t from-bg-default-50/20 dark:from-bg-default-9/20 to-transparent;
 }
 </style>

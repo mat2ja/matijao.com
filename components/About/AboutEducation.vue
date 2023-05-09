@@ -39,11 +39,11 @@ const schools = [
           <span text-xs font-bold uppercase>{{ school.nameShort }}</span>
         </div>
 
-        <p text-dimmed>
+        <p text-dimmed text-sm>
           {{ school.field }}
         </p>
 
-        <div text-dimmed flex items-center gap-2>
+        <div text-dimmed text-sm flex items-center gap-2>
           <span>{{ school.from }} &ndash; {{ school.to }}</span>
           &bull;
           <span>{{ school.location }}</span>

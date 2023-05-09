@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <h2 text-6xl font-display mb-5>
+      <h2 text-3xl lg:text-6xl font-display mb="3 sm:5">
         Matija Osrečki
       </h2>
 

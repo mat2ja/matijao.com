@@ -66,7 +66,8 @@ withDefaults(defineProps<{
 
 <style lang="postcss" scoped>
 .btn {
-  @apply flex gap-2 items-center justify-center py-2 px-3 rounded-lg text-xs font-semibold hover:(ring-2 ring-transparent) active:(scale-95) focus:(outline-none);
+  @apply flex gap-2 items-center justify-center py-2 px-3 rounded-lg text-sm font-semibold hover:(ring-2 ring-transparent) active:(scale-95) focus:(outline-none);
+  @apply transition;
 
   &.primary {
     @apply text-default-8 dark:text-default-3 bg-[#EFEEED] dark:bg-default-8 hover:(ring-default-2 dark:ring-default-7);
