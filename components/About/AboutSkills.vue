@@ -7,7 +7,7 @@ const shownSkills = computed(() => favsOnly.value ? skills.filter(({ favorite })
 
 <template>
   <AboutSection title="Skills" icon="ph:toolbox-duotone">
-    <div  grid grid-cols="1 sm:2 lg:3" grid-rows="6" gap-4
+    <div  grid grid-cols="1 sm:2 lg:3" grid-rows="sm:6 lg:4" gap-4
     >
       <NuxtLink
         v-for="item in shownSkills"
