@@ -21,7 +21,7 @@ const openProject = () => {
   <div flex items-center justify-between relative h-full class="group">
     <div
       h-full w-full max-w-full md:max-w-lg py-4 px-5 rounded-2xl cursor-pointer relative flex gap-4
-      class="lg:translate-y-1 transition border-2 border-transparent bg-transparent dark:bg-default-8/40 border-default-2/40 dark:border-default-8/40 hover:(lg:translate-y-0)"
+      class="lg:translate-y-1 transition border-2 bg-stone-2/20 border-stone-2/40 dark:bg-default-8/40 border-default-2/40 dark:border-default-8/40 hover:(lg:translate-y-0)"
       @click="openProject"
     >
       <div flex-1 flex flex-col gap-2>

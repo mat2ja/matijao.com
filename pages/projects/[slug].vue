@@ -14,7 +14,7 @@ const images = computed(() => {
 </script>
 
 <template>
-  <div v-if="project" row>
+  <div v-if="project">
     <div>
       <BaseButton ml--3 icon="ph:arrow-left-bold" variant="blank" @click="navigateTo({ name: 'projects' })">
         Back

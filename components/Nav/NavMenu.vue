@@ -18,7 +18,7 @@ const isLinkActive = (item: NavItem) => {
 
 <template>
   <aside w-max lg:sticky top-20>
-    <nav flex flex-col items-start>
+    <nav flex="~ md:col" items-start>
       <NuxtLink
         v-for="(item, i) in items"
         :key="i"

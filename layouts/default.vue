@@ -4,7 +4,7 @@
 
 <template>
   <div row>
-    <div flex-1 p-8 flex items-start gap-18 pt-50>
+    <div flex-1 py-8 pt="8 md:50" flex="~ col gap-10 md:(row gap-18)" items-start>
       <NavMenu />
 
       <div flex-1 pb-24>
