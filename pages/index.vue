@@ -1,8 +1,10 @@
 <template>
   <div>
-    <div relative>
-      <h2 text-4xl lg:text-7xl font-display mb="3 sm:5">
+    <div lt-md:mt-8vh>
+      <h2 text-4xl sm:text-5xl md:text-7xl font-display mb="3 sm:5" w-max relative>
         Matija Osrečki
+
+        <SVGCloud absolute pos="top--50 right--120 sm:(top--50 right--115) md:(top--60 right--85)" z--1 />
       </h2>
 
       <div max-text>
@@ -35,7 +37,5 @@
         </div>
       </div>
     </div>
-
-    <SVGCloud absolute top--5 right-40 z--1 />
   </div>
 </template>

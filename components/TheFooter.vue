@@ -9,7 +9,7 @@ const year = ref(new Date().getFullYear())
 <template>
   <footer z-100>
     <div
-      text-xs font-mono py-8 md:py-5
+      text-xs font-mono py-8 md:py-3
       flex="~ col md:row" items-center justify-between text-dimmed
     >
       <div flex items-center gap-1 class="footer-statusbar" rounded-r-full>

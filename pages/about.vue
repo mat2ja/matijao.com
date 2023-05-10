@@ -13,7 +13,7 @@ const openPdf = () => {
       About me
     </h2>
 
-    <div space-y-24>
+    <div space-y-20>
       <div flex items-center gap-24>
         <div flex-1 space-y-4 leading-relaxed text-dimmed max-text>
           <p>
@@ -40,7 +40,7 @@ const openPdf = () => {
         <AboutEducation />
       </div>
 
-      <AboutCompetitions />
+      <AboutCompetitions pt-6 pb-12 />
 
       <AboutSkills />
     </div>

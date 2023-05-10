@@ -8,7 +8,7 @@ const { extensions, projects, starters, play } = useProjects()
       Projects
     </h2>
 
-    <div space-y-32>
+    <div space-y-20>
       <section grid lg:grid-cols-2 gap-5 md:gap-4>
         <ProjectCardSimple
           v-for="(project, i) in projects"
@@ -19,7 +19,7 @@ const { extensions, projects, starters, play } = useProjects()
       </section>
 
       <div>
-        <h3 font-display text-xl sm:text-2xl md:text-3xl mb-4>
+        <h3 font-display text-3xl mb-4>
           Personal
         </h3>
         <section grid md:grid-cols-2 gap-x-5 gap-y-4>
@@ -33,7 +33,7 @@ const { extensions, projects, starters, play } = useProjects()
       </div>
 
       <div>
-        <h3 font-display text-xl sm:text-2xl md:text-3xl mb-4>
+        <h3 font-display text-3xl mb-4>
           Extensions and plugins
         </h3>
         <section grid md:grid-cols-2 gap-x-5 gap-y-4>
@@ -47,7 +47,7 @@ const { extensions, projects, starters, play } = useProjects()
       </div>
 
       <div>
-        <h3 font-display text-xl sm:text-2xl md:text-3xl mb-4>
+        <h3 font-display text-3xl mb-4>
           Starter templates
         </h3>
         <section grid md:grid-cols-2 gap-x-5 gap-y-4>
