@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { addMonths, differenceInMonths } from 'date-fns'
-import { jobs } from '~~/constants/jobs'
+import { jobs } from '~~/constants'
 
 const formatDate = (date: Date) => {
   return new Intl.DateTimeFormat('en-US', {

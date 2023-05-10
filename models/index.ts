@@ -15,7 +15,10 @@ export type Project = {
   wip?: boolean
   thumbnail?: string
   images?: string[]
+  categories: ProjectCategory[]
 }
+
+export type ProjectCategory = 'featured' | 'projects' | 'play' | 'extensions' | 'starters'
 
 export type SocialLink = {
   label: string

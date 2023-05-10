@@ -8,6 +8,7 @@ export const projects: Project[] = [
     year: 2022,
     repo: 'https://github.com/mat2ja/fire-zavrsni',
     thumbnail: '/projects/fare.webp',
+    categories: ['projects'],
   },
   {
     name: 'Qwiz',
@@ -17,6 +18,7 @@ export const projects: Project[] = [
     repo: 'https://github.com/qwiz-app/qwiz',
     url: 'https://app.qwiz.party',
     thumbnail: '/projects/qwiz.webp',
+    categories: ['projects'],
   },
   {
     name: 'Aimo',
@@ -26,6 +28,7 @@ export const projects: Project[] = [
     repo: 'https://github.com/mat2ja/aimo',
     url: 'https://aimo.vercel.app',
     thumbnail: '/projects/aimo.webp',
+    categories: ['play'],
   },
   {
     name: 'matijao.com',
@@ -36,6 +39,7 @@ export const projects: Project[] = [
     url: 'https://matijao.com',
     wip: true,
     thumbnail: '/projects/matijao.webp',
+    categories: ['play'],
   },
   {
     name: 'Favicônes',
@@ -45,6 +49,7 @@ export const projects: Project[] = [
     repo: 'https://github.com/mat2ja/favicones',
     url: 'https://favicones.vercel.app/',
     thumbnail: '/projects/favicones.webp',
+    categories: ['play'],
   },
   {
     name: 'BTC Tools',
@@ -55,6 +60,7 @@ export const projects: Project[] = [
     repo: 'https://github.com/mat2ja/btc-tools',
     url: 'https://bip39-rosy.vercel.app',
     thumbnail: '/projects/btc-tools.webp',
+    categories: ['play'],
   },
   {
     name: 'MeetMia',
@@ -67,6 +73,7 @@ export const projects: Project[] = [
     images: [
       '/projects/meetmia/01.webp',
     ],
+    categories: ['play'],
   },
   {
     name: 'Comet',
@@ -76,16 +83,16 @@ export const projects: Project[] = [
     repo: 'https://github.com/mat2ja/comet',
     url: 'https://comet-blush.vercel.app',
     thumbnail: '/projects/comet.webp',
+    categories: ['projects'],
   },
-]
 
-export const extensions: Project[] = [
   {
     name: 'Vue Ecosystem Snippets',
     description: 'Snippets for the modern Vue ecosystem',
     year: 2023,
     url: 'https://marketplace.visualstudio.com/items?itemName=matijao.vue-nuxt-snippets',
     tags: ['Deno', 'TypeScript'],
+    categories: ['extensions'],
   },
   {
     name: 'Modern JavaScript Snippets',
@@ -93,6 +100,7 @@ export const extensions: Project[] = [
     year: 2023,
     url: 'https://marketplace.visualstudio.com/items?itemName=matijao.modern-js-snippets',
     tags: ['Deno', 'TypeScript'],
+    categories: ['extensions'],
   },
   {
     name: 'URL Editor for Chrome',
@@ -101,6 +109,7 @@ export const extensions: Project[] = [
     repo: 'https://github.com/mat2ja/url-editor',
     tags: ['SvelteKit', 'Tailwind'],
     wip: true,
+    categories: ['extensions'],
   },
   {
     name: 'Raycast Project Scaffolder',
@@ -109,6 +118,7 @@ export const extensions: Project[] = [
     url: undefined,
     tags: ['React'],
     wip: true,
+    categories: ['extensions'],
   },
   {
     name: 'pnpm.plugin.zsh',
@@ -116,10 +126,8 @@ export const extensions: Project[] = [
     year: 2023,
     repo: 'https://github.com/mat2ja/pnpm.plugin.zsh',
     tags: ['Zsh'],
+    categories: ['extensions'],
   },
-]
-
-export const starters: Project[] = [
   {
     name: 'Nuxt Starter',
     description: 'Nuxt 3 & UnoCSS starter template',
@@ -127,6 +135,7 @@ export const starters: Project[] = [
     repo: 'https://github.com/mat2ja/nuxt-starter',
     url: 'https://nuxt-starter-iota.vercel.app/',
     tags: ['Nuxt', 'UnoCSS'],
+    categories: ['starters'],
   },
   {
     name: 'Vue Starter',
@@ -135,6 +144,7 @@ export const starters: Project[] = [
     repo: 'https://github.com/mat2ja/vue-starter',
     url: 'https://vue-uno-starter.vercel.app/',
     tags: ['Vue', 'UnoCSS'],
+    categories: ['starters'],
   },
   {
     name: 'Vue & Anu Starter',
@@ -143,5 +153,6 @@ export const starters: Project[] = [
     repo: 'https://github.com/mat2ja/vue-anu-starter',
     url: 'https://vue-anu-starter.vercel.app/',
     tags: ['Vue', 'UnoCSS'],
+    categories: ['starters'],
   },
 ]

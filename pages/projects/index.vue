@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { extensions, projects, starters } from '~~/constants/projects'
+const { extensions, projects, starters, play } = useProjects()
 </script>
 
 <template>
@@ -17,6 +17,20 @@ import { extensions, projects, starters } from '~~/constants/projects'
           :project="project"
         />
       </section>
+
+      <div>
+        <h3 font-display text-xl sm:text-2xl md:text-3xl mb-4>
+          Personal
+        </h3>
+        <section grid md:grid-cols-2 gap-x-5 gap-y-4>
+          <ProjectCardSimple
+            v-for="(project, i) in play"
+            :key="i"
+            :index="i"
+            :project="project"
+          />
+        </section>
+      </div>
 
       <div>
         <h3 font-display text-xl sm:text-2xl md:text-3xl mb-4>

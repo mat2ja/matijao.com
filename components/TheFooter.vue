@@ -76,7 +76,6 @@ const year = ref(new Date().getFullYear())
 
 <style lang="postcss" scoped>
 .footer-statusbar {
-  /* @apply px-3 py-1 backdrop-blur-sm bg-gradient-to-t from-bg-default-50/20 dark:from-bg-default-9/20 to-transparent; */
   @apply px-3 py-3 md:py-1;
 }
 </style>
