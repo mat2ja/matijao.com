@@ -25,16 +25,12 @@ const images = computed(() => {
 </script>
 
 <template>
-  <div v-if="project">
+  <div v-if="project" class="md:mt--60px">
     <div>
-      <BaseButton ml--3 icon="ph:arrow-left-bold" variant="blank" @click="navigateTo({ name: 'projects' })">
-        Back
-      </BaseButton>
-
-      <div flex items-start justify-between mt-8>
-        <h2 font-display text-4xl sm:text-5xl md:text-6xl>
-          {{ project.name }}
-        </h2>
+      <div flex items-center justify-between>
+        <BaseButton ml--3 icon="ph:arrow-left-bold" variant="blank" @click="navigateTo({ name: 'projects' })">
+          Back
+        </BaseButton>
 
         <div flex items-center gap-2 shrink-0>
           <BaseButton
@@ -57,6 +53,11 @@ const images = computed(() => {
           </BaseButton>
         </div>
       </div>
+      <div flex items-start justify-between mt-8>
+        <h2 font-display text-4xl sm:text-5xl md:text-6xl>
+          {{ project.name }}
+        </h2>
+      </div>
 
       <ul mt-4 flex items-center flex-wrap gap-2>
         <ProjectTag v-for="tag in project.tags" :key="tag">
@@ -76,7 +77,7 @@ const images = computed(() => {
       >
         <div
           overflow-hidden rounded-xl border border-2 border-black dark:border-accent
-          w="720px"
+          w="full lg:720px"
           aspect-ratio="720/450"
         >
           <NuxtLink

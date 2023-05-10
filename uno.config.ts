@@ -36,7 +36,7 @@ export default defineConfig({
   theme: {
     colors: {
       accent: theme.colors?.orange,
-      default: theme.colors?.stone,
+      default: theme.colors?.neutral,
     },
   },
   transformers: [

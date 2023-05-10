@@ -25,7 +25,7 @@ const isLinkActive = (item: NavItem) => {
         :to="item.path"
         py-1 px-2.5 rounded-lg lowercase
         transition
-        class="text-stone-4 dark:text-stone-5 hover:(text-stone-8 dark:text-stone-2)"
+        class="text-default-4 dark:text-default-5 hover:(text-default-8 dark:text-default-2)"
         :class="{
           'link-active': isLinkActive(item),
         }"
@@ -39,6 +39,6 @@ const isLinkActive = (item: NavItem) => {
 
 <style lang="postcss" scoped>
 .link-active {
-  @apply bg-stone-2/40 dark:bg-stone-8 !text-stone-8 !dark:text-stone-2;
+  @apply bg-default-2/40 dark:bg-default-8 !text-default-8 !dark:text-default-2;
 }
 </style>

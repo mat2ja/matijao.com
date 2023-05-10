@@ -36,7 +36,7 @@ const openPdf = () => {
 
       <AboutCareer />
 
-      <div class="border-2 bg-default-2/20 border-default-2/40" p-8 rounded-2xl>
+      <div class="border-2 bg-default-2/20 border-default-2/40 dark:bg-default-8/40 border-default-2/40 dark:border-default-8/40" p-8 rounded-2xl>
         <AboutEducation />
       </div>
 
