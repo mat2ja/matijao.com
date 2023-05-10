@@ -28,7 +28,7 @@ export const projects: Project[] = [
     repo: 'https://github.com/mat2ja/aimo',
     url: 'https://aimo.vercel.app',
     thumbnail: '/projects/aimo.webp',
-    categories: ['play'],
+    categories: ['projects'],
   },
   {
     name: 'matijao.com',
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     repo: 'https://github.com/mat2ja/comet',
     url: 'https://comet-blush.vercel.app',
     thumbnail: '/projects/comet.webp',
-    categories: ['projects'],
+    categories: ['play'],
   },
 
   {
