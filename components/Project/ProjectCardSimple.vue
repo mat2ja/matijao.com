@@ -6,12 +6,17 @@ const { project } = defineProps<{
   index: number
 }>()
 
-const slug = ref(slugify(project.name))
-
 const hasLink = computed(() => project.repo || project.url)
+
 const openProject = () => {
-  if (hasLink.value)
-    navigateTo(`/projects/${slug.value}`)
+  if (hasLink.value) {
+    navigateTo({
+      name: 'projects-slug',
+      params: {
+        slug: slugify(project.name),
+      },
+    })
+  }
 
   // TODO: create a test that checks if project pages are in line with slugified project names
 }
@@ -21,7 +26,7 @@ const openProject = () => {
   <div flex items-center justify-between relative h-full class="group">
     <div
       h-full w-full max-w-full md:max-w-lg py-4 px-5 rounded-2xl cursor-pointer relative flex gap-4
-      class="lg:translate-y-1 transition border-2 bg-stone-2/20 border-stone-2/40 dark:bg-default-8/40 border-default-2/40 dark:border-default-8/40 hover:(lg:translate-y-0)"
+      class="lg:translate-y-1 transition border-2 bg-default-2/20 border-default-2/40 dark:bg-default-8/40 border-default-2/40 dark:border-default-8/40 hover:(lg:translate-y-0)"
       @click="openProject"
     >
       <div flex-1 flex flex-col gap-2>

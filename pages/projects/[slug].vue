@@ -1,10 +1,21 @@
 <script lang="ts" setup>
+import type { Project } from '~/models'
+
 const params = useRoute()
 const {
   slug,
 } = params.params as { slug: string }
 
-const { project } = useProject({ slug })
+const { project, previousProject, nextProject } = useProject({ slug })
+
+const gotoProject = (project: Project) => {
+  navigateTo({
+    name: 'projects-slug',
+    params: {
+      slug: slugify(project.name),
+    },
+  })
+}
 
 const images = computed(() => {
   if (project.value?.images?.length)
@@ -63,13 +74,18 @@ const images = computed(() => {
         v-for="image in images"
         :key="image"
       >
-        <div overflow-hidden rounded-xl border border-2 border-black dark:border-accent>
+        <div
+          overflow-hidden rounded-xl border border-2 border-black dark:border-accent
+          w="720px"
+          aspect-ratio="720/450"
+        >
           <NuxtLink
+
             relative
             :to="image" target="_blank" external
           >
             <NuxtImg
-              width="1904px"
+              width="1440px"
               format="webp"
               :src="image"
               alt="Project thumbnail"
@@ -77,6 +93,25 @@ const images = computed(() => {
           </NuxtLink>
         </div>
       </div>
+    </div>
+
+    <div mt-24 pt-8 border-t border="t default-3/80 dark:default-7/80" flex items-center justify-between text-sm font-medium>
+      <button v-if="previousProject" text-left @click="gotoProject(previousProject)">
+        <p text-default-5 dark:text-default-4>
+          Previous
+        </p>
+        <p mt-0.8>
+          {{ previousProject?.name }}
+        </p>
+      </button>
+      <button v-if="nextProject" ml-auto text-right @click="gotoProject(nextProject)">
+        <p text-default-5 dark:text-default-4>
+          Next
+        </p>
+        <p mt-0.8>
+          {{ nextProject?.name }}
+        </p>
+      </button>
     </div>
   </div>
 </template>
