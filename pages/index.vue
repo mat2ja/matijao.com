@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import { socials } from '~/constants'
+
+const socialLinks = [socials.github, socials.linkedin, socials.twitter]
+</script>
+
 <template>
   <div>
     <div lt-md:mt-8vh>
@@ -14,25 +20,12 @@
 
         <div flex items-center gap-3 mt-6 class="group" w-fit>
           <NuxtLink
-            href="https://github.com/mat2ja"
+            v-for="social in socialLinks" :key="social.href"
+            :href="social.href"
             external target="_blank"
             hyperlink px-2 py-2 ml--2 lowercase class="group-hover:(opacity-40) hover:(!opacity-100)"
           >
-            GitHub
-          </NuxtLink>
-          <NuxtLink
-            href="https://linkedin.com/in/matijao"
-            external target="_blank"
-            hyperlink px-2 py-2 ml--2 lowercase class="group-hover:(opacity-40) hover:(!opacity-100)"
-          >
-            LinkedIn
-          </NuxtLink>
-          <NuxtLink
-            href="https://twitter.com/matijao_"
-            external target="_blank"
-            hyperlink px-2 py-2 ml--2 lowercase class="group-hover:(opacity-40) hover:(!opacity-100)"
-          >
-            Twitter
+            {{ social.label }}
           </NuxtLink>
         </div>
       </div>

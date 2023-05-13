@@ -26,7 +26,6 @@ export default defineConfig({
           provider: 'none',
         },
         mono: {
-          // name: 'iA Writer Mono',
           name: 'DM Mono',
           provider: 'google',
         },
