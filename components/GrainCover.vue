@@ -3,7 +3,7 @@ const { isDark } = useTheme()
 </script>
 
 <template>
-  <div id="grain" overflow="hidden" :class="[isDark ? 'opacity-10' : 'opacity-5']" />
+  <div id="grain" overflow="hidden" :class="[isDark ? 'opacity-8' : 'opacity-5']" />
 </template>
 
 <style scoped>

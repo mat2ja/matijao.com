@@ -1,15 +1,33 @@
 <script lang="ts" setup>
-
+withDefaults(defineProps<{
+  variant: 'accent' | 'outline'
+}>(), {
+  variant: 'outline',
+})
 </script>
 
 <template>
   <span
+    id="project-tag"
     py="0.5" px-2
-    border="default-3 dark:default-7 1 rounded-full"
-    font="mono medium"
-    class="text-11px text-dimmed"
+    border="~ rounded-full"
+    font="mono"
+    class="text-11px"
+    :class="[`variant-${variant}`]"
     lowercase
   >
     <slot />
   </span>
 </template>
+
+<style lang="postcss" scoped>
+#project-tag {
+  &.variant-outline {
+    @apply bg-transparent test-dimmed border-default-3/80 dark:border-default-6/60 font-medium;
+  }
+
+  &.variant-accent {
+    @apply bg-accent-400/85 dark:bg-accent-500 dark:filter-saturate-80 text-default-9 !border-transparent font-semibold;
+  }
+}
+</style>

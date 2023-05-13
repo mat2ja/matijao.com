@@ -35,7 +35,7 @@ export const projects: Project[] = [
     description: 'The site you are admiring right now.',
     tags: ['Nuxt', 'Vue', 'TypeScript', 'UnoCSS'],
     year: 2023,
-    repo: 'https://github.com/mat2ja/matijao.me',
+    repo: 'https://github.com/mat2ja/matijao.com',
     url: 'https://matijao.com',
     wip: true,
     thumbnail: '/projects/matijao.webp',

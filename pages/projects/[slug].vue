@@ -2,9 +2,7 @@
 import type { Project } from '~/models'
 
 const params = useRoute()
-const {
-  slug,
-} = params.params as { slug: string }
+const { slug } = params.params as { slug: string }
 
 const { project, previousProject, nextProject } = useProject({ slug })
 
@@ -48,6 +46,7 @@ const images = computed(() => {
             external new-tab
             icon="ph:arrow-up-right-bold"
             icon-position="right"
+            variant="primary"
           >
             See live
           </BaseButton>
@@ -60,6 +59,9 @@ const images = computed(() => {
       </div>
 
       <ul mt-4 flex items-center flex-wrap gap-2>
+        <ProjectTag v-if="project.wip" variant="accent">
+          work in progress
+        </ProjectTag>
         <ProjectTag v-for="tag in project.tags" :key="tag">
           {{ tag }}
         </ProjectTag>

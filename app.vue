@@ -26,4 +26,8 @@ html.dark {
   width: 0;
   height: 0;
 }
+
+* {
+  @apply focus-visible:(!ring-2 !ring-default-9 !dark:ring-default-50 !outline-none !transition-none);
+}
 </style>

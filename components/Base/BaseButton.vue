@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 withDefaults(defineProps<{
-  variant?: 'primary' | 'blank'
+  variant?: 'primary' | 'default' | 'blank'
   icon?: string
   iconPosition?: 'left' | 'right'
   label?: string
@@ -8,7 +8,7 @@ withDefaults(defineProps<{
   external?: boolean
   newTab?: boolean
 }>(), {
-  variant: 'primary',
+  variant: 'default',
   iconPosition: 'left',
 })
 </script>
@@ -64,15 +64,23 @@ withDefaults(defineProps<{
 
 <style lang="postcss" scoped>
 .btn {
-  @apply flex gap-2 items-center justify-center py-1.75 px-3 rounded-lg text-sm font-semibold hover:(ring-2 ring-transparent) active:(scale-95) focus:(outline-none);
+  @apply flex gap-2 items-center justify-center py-1.75 px-3 rounded-lg text-sm font-semibold;
   @apply transition;
 
+  &.default {
+    @apply bg-[#EFEEED] dark:bg-default-8;
+    @apply text-default-8 dark:text-default-2;
+    @apply hover:(ring-2 ring-default-2 dark:ring-default-7);
+  }
+
   &.primary {
-    @apply text-primary bg-[#EFEEED] dark:bg-default-8 hover:(ring-default-2 dark:ring-default-7);
+    @apply bg-default-9 dark:bg-default-1;
+    @apply text-default-2 dark:text-default-9;
+    @apply hover:(ring-2 ring-accent);
   }
 
   &.blank {
-    @apply text-dimmed hover:(bg-[#EFEEED] dark:bg-default-8 text-primary) focus:(ring-default-2 dark:ring-default-7);
+    @apply text-dimmed hover:(bg-[#EFEEED] dark:bg-default-8 text-primary);
   }
 }
 </style>

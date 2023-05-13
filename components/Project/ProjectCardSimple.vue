@@ -35,7 +35,7 @@ const openProject = () => {
             <h3
               line-clamp-1 font-sans font-semibold text-xl flex-1
               transition duration-300
-              class="-mx-0.5 -my-0.5 py-0.5 pb-0.5 px-1 rounded-sm underline decoration-transparent decoration-offset-3 decoration-wavy group-hover:(!decoration-accent-400)"
+              class="-mx-0.5 -my-0.5 py-0.5 pb-0.5 px-1 rounded-sm underline decoration-transparent decoration-offset-3 decoration-wavy group-hover:(!decoration-accent-4)"
             >
               {{ project.name }}
             </h3>
@@ -75,6 +75,9 @@ const openProject = () => {
 
         <div mt-auto>
           <div mt-2 flex items-center flex-wrap gap-1>
+            <ProjectTag v-if="project.wip" variant="accent">
+              wip
+            </ProjectTag>
             <ProjectTag v-for="tag in project.tags" :key="tag">
               {{ tag }}
             </ProjectTag>
