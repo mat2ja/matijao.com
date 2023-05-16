@@ -46,7 +46,7 @@ const calculateDuration = (from: Date, to: Date | null) => {
             :to="job.company.url" target="_blank" external
             hyperlink-wavy transition
 
-            :class="{'!decoration-accent': i === 0}"
+            :class="{ '!decoration-accent': i === 0 }"
           >
             {{ job.company.name }}
           </NuxtLink>

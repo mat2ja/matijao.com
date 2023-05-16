@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
-    'nuxt-typed-router',
     '@nuxtjs/critters',
     '@nuxtjs/robots',
     '@nuxt/devtools',
@@ -25,7 +24,15 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    inlineSSRStyles: true,
+    typedPages: true,
+  },
+
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        moduleResolution: 'bundler',
+      },
+    },
   },
 
   devtools: {
