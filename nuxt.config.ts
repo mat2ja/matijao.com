@@ -15,6 +15,15 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
   ],
 
+  vite: {
+    vue: {
+      script: {
+        defineModel: true,
+        propsDestructure: true,
+      },
+    },
+  },
+
   experimental: {
     inlineSSRStyles: true,
   },
