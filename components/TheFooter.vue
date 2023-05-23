@@ -39,6 +39,7 @@ const year = ref(new Date().getFullYear())
 
         <template v-if="weather">
           <div
+            lt-md="hidden"
             flex items-center gap-1 lowercase
           >
             <img :src="weather.image" alt="" h-3ch ml--1 mr-0>
@@ -46,8 +47,9 @@ const year = ref(new Date().getFullYear())
 
             <p>{{ weather.description }}</p>
           </div>
-
-          &middot;
+          <span lt-md="hidden">
+            &middot;
+          </span>
         </template>
 
         <p>

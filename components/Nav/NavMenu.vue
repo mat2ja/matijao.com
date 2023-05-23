@@ -6,7 +6,7 @@ const items = ref<NavItem[]>([
   { name: 'About', path: '/about' },
   { name: 'Projects', path: '/projects' },
   // { name: 'Blog', path: '/blog' },
-  { name: 'Contact', path: '/contact' },
+  // { name: 'Contact', path: '/contact' },
 ])
 
 const route = useRoute()

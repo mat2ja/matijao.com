@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { socials } from '~/constants'
 
-const socialLinks = [socials.github, socials.linkedin, socials.twitter]
+const socialLinks = [socials.github, socials.linkedin, socials.twitter, { ...socials.email, label: 'contact@matijao.com' }]
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const socialLinks = [socials.github, socials.linkedin, socials.twitter]
 
       <div max-text>
         <p text-dimmed>
-          Self-motivated front-end oriented software developer, very much in love with all things web development. Obsessed with Bitcoin.
+          Self-motivated front-end oriented software developer, very much in love with all things bitcoin & web development.
         </p>
 
         <div flex items-center gap-3 mt-6 class="group" w-fit>
