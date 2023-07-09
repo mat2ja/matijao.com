@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 withDefaults(defineProps<{
-  variant: 'accent' | 'outline'
+  variant?: 'accent' | 'outline'
 }>(), {
   variant: 'outline',
 })
