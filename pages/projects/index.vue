@@ -34,7 +34,7 @@ const { extensions, projects, starters, play } = useProjects()
 
       <div>
         <h3 font-display text-3xl mb-4>
-          Extensions and plugins
+          Extensions & plugins
         </h3>
         <section grid md:grid-cols-2 gap-x-5 gap-y-4>
           <ProjectCardSimple

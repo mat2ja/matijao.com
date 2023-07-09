@@ -25,9 +25,9 @@ export const socials: Record<string, SocialLink> = {
   },
   email: {
     label: 'Email',
-    username: 'contact@matijao.com',
+    username: 'hello@matijao.com',
     icon: 'ph:envelope-duotone',
-    href: 'mailto:contact@matijao.com',
+    href: 'mailto:hello@matijao.com',
     color: '#DB4437',
   },
   mastodon: {

@@ -1,7 +1,11 @@
 <script lang="ts" setup>
 import { socials } from '~/constants'
 
-const socialLinks = [socials.github, socials.linkedin, socials.twitter, { ...socials.email, label: 'contact@matijao.com' }]
+const socialLinks = [socials.github, socials.linkedin, socials.twitter,
+  {
+    ...socials.email,
+    label: `${socials.email.username.split('@')[0]}@matijao.com`,
+  }]
 </script>
 
 <template>
