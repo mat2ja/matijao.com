@@ -70,7 +70,7 @@ export default defineNuxtConfig({
   robots: {
     rules: {
       UserAgent: '*',
-      Disallow: '/',
+      Allow: '/',
     },
   },
 
