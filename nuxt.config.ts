@@ -77,6 +77,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Matija Osrečki',
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      ],
     },
   },
 })
