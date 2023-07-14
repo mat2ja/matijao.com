@@ -3,17 +3,17 @@ import type { SocialLink } from '~/models'
 export const socials: Record<string, SocialLink> = {
   github: {
     label: 'GitHub',
-    username: '@mat2ja',
+    username: '@matijaoe',
     icon: 'ph:github-logo-duotone',
-    href: 'https://github.com/mat2ja',
+    href: 'https://github.com/matijaoe',
     color: '#171515',
     colorDark: '#fafaf9',
   },
   twitter: {
     label: 'Twitter',
-    username: '@matijao_',
+    username: '@matijaoe',
     icon: 'ph:twitter-logo-duotone',
-    href: 'https://twitter.com/matijao_',
+    href: 'https://twitter.com/matijaoe',
     color: '#1F9CEA',
   },
   linkedin: {
