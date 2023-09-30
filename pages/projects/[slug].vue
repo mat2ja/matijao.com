@@ -1,10 +1,17 @@
 <script lang="ts" setup>
 import type { Project } from '~/models'
+import { useMagicKeys } from '@vueuse/core'
 
 const params = useRoute()
 const { slug } = params.params as { slug: string }
 
 const { project, previousProject, nextProject } = useProject({ slug })
+
+const images = computed(() => {
+  if (project.value?.images?.length)
+    return project.value.images
+  return project.value?.thumbnail ? [project.value?.thumbnail] : []
+})
 
 const gotoProject = (project: Project) => {
   navigateTo({
@@ -15,11 +22,18 @@ const gotoProject = (project: Project) => {
   })
 }
 
-const images = computed(() => {
-  if (project.value?.images?.length)
-    return project.value.images
-  return project.value?.thumbnail ? [project.value?.thumbnail] : []
-})
+const toPrevious = () => {
+  if (previousProject.value)
+    gotoProject(previousProject.value)
+}
+const toNext = () => {
+  if (nextProject.value)
+    gotoProject(nextProject.value)
+}
+
+const { arrowLeft, arrowRight } = useMagicKeys()
+whenever(arrowLeft, () => toPrevious())
+whenever(arrowRight, () => toNext())
 </script>
 
 <template>
@@ -99,7 +113,7 @@ const images = computed(() => {
     </div>
 
     <div mt-24 pt-8 border-t border="t default-3/80 dark:default-7/80" flex items-center justify-between text-sm font-medium>
-      <button v-if="previousProject" text-left class="group" @click="gotoProject(previousProject)">
+      <button v-if="previousProject" text-left class="group" @click="toPrevious">
         <p text-default-5 dark:text-default-4>
           Previous
         </p>
@@ -107,7 +121,7 @@ const images = computed(() => {
           {{ previousProject?.name }}
         </p>
       </button>
-      <button v-if="nextProject" class="group" ml-auto text-right @click="gotoProject(nextProject)">
+      <button v-if="nextProject" class="group" ml-auto text-right @click="toNext">
         <p text-default-5 dark:text-default-4>
           Next
         </p>
