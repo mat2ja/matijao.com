@@ -36,13 +36,14 @@ const list = [
           </div>
 
           <div flex items-center gap-2>
-            <NuxtLink :href="`/projects/${item.project.toLowerCase()}`" hyperlink transition>
-              {{ item.project }}
+            <NuxtLink :href="`/projects/${item.project.toLowerCase()}`" >
+              <span hyperlink transition>{{ item.project }}</span>
+              <template v-if="item.additional">
+                <span text-opaque mx-1.5>&bullet;</span>
+                <span>{{ item.additional }}</span>
+              </template>
             </NuxtLink>
-            <template v-if="item.additional">
-              <span text-opaque>|</span>
-              {{ item.additional }}
-            </template>
+
           </div>
 
           <div flex items-center gap-2>

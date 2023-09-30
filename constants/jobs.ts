@@ -11,6 +11,17 @@ export const jobs = [
     remote: true,
   },
   {
+    position: 'Frontend Developer',
+    company: {
+      name: 'Cura4You',
+      location: 'Cologne, Germany',
+      url: 'https://cura4you.de',
+    },
+    from: new Date(2023, 6),
+    to: null,
+    remote: true,
+  },
+  {
     position: 'Junior Frontend Developer',
     company: {
       name: 'Three of them Ltd',

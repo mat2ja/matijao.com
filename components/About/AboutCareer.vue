@@ -20,10 +20,16 @@ const calculateDuration = (from: Date, to: Date | null) => {
   else {
     const years = Math.floor(months / 12)
     const monthsLeft = months % 12
-    if (!monthsLeft)
-      return `${years} year${years > 1 ? 's' : ''}`
 
-    return `${years} years, ${monthsLeft} months`
+    const formatPlural = (label: string, value: number) => `${label}${value > 1 ? 's' : ''}`
+
+    const monthFormat = formatPlural('month', monthsLeft)
+    const yearLabel = formatPlural('year', years)
+
+    if (!monthsLeft)
+      return `${years} ${yearLabel}`
+
+    return `${years} ${yearLabel}, ${monthsLeft} ${monthFormat}`
   }
 }
 </script>

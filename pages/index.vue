@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import { socials } from '~/constants'
 
-const socialLinks = [socials.github, socials.linkedin, socials.twitter,
-  {
-    ...socials.email,
-    label: `${socials.email.username.split('@')[0]}@matijao.com`,
-  }]
+const email =  {
+  ...socials.email,
+  label: `${socials.email.username.split('@')[0]}@matijao.com`,
+}
+
+const socialLinks = [socials.github, socials.linkedin, socials.twitter, socials.goodreads, email]
 </script>
 
 <template>
@@ -19,10 +20,10 @@ const socialLinks = [socials.github, socials.linkedin, socials.twitter,
 
       <div max-text>
         <p text-dimmed>
-          Self-motivated front-end oriented software developer, very much in love with all things bitcoin & web development.
+          Internally driven front-end oriented software developer, very much in love with all things bitcoin & web development.
         </p>
 
-        <div flex items-center gap-3 mt-6 class="group" w-fit>
+        <div flex flex-col md:flex-row items-start md:items-center gap-1 md:gap-3 mt-6 class="group" w-fit>
           <NuxtLink
             v-for="social in socialLinks" :key="social.href"
             :href="social.href"

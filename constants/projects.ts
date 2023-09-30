@@ -103,7 +103,7 @@ export const projects: Project[] = [
   },
   {
     name: 'URL Query Editor',
-    description: 'Chrome Extension',
+    description: 'Simple but powerful Chrome extension for editing URL query parameters',
     year: 2023,
     repo: 'https://github.com/matijaoe/url-query-editor',
     thumbnail: '/projects/url-query-editor.webp',
@@ -112,7 +112,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Flickstream',
-    description: 'Inject direct links into Letterboxd and IMDb movie pages 🤫',
+    description: 'Inject direct watch links into Letterboxd and IMDb movie pages 🤫',
     year: 2023,
     repo: 'https://github.com/matijaoe/flickstream',
     thumbnail: '/projects/flickstream-letterboxd.webp',
