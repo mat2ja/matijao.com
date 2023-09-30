@@ -2,6 +2,7 @@
 import ResumePDF from '/Resume.pdf'
 
 const openPdf = () => {
+  // eslint-disable-next-line n/prefer-global/process
   if (process.client)
     window.open(ResumePDF, '_blank')
 }

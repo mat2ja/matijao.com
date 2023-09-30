@@ -20,7 +20,7 @@ const year = ref(new Date().getFullYear())
         &middot;
 
         <NuxtLink
-          href="https://github.com/mat2ja/matijao-v2"
+          href="https://github.com/matijaoe/matijao.com"
           target="_blank"
           hover:underline
           @click.stop

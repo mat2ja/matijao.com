@@ -16,6 +16,7 @@ export const useProject = ({ slug }: { slug: string }) => {
   })
 
   const nextProject = computed(() => {
+    console.log(allProjects)
     if (!isDefined(projectIndex))
       return undefined
 

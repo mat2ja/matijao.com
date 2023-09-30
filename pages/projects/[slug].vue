@@ -99,19 +99,19 @@ const images = computed(() => {
     </div>
 
     <div mt-24 pt-8 border-t border="t default-3/80 dark:default-7/80" flex items-center justify-between text-sm font-medium>
-      <button v-if="previousProject" text-left @click="gotoProject(previousProject)">
+      <button v-if="previousProject" text-left class="group" @click="gotoProject(previousProject)">
         <p text-default-5 dark:text-default-4>
           Previous
         </p>
-        <p mt-0.8>
+        <p mt-0.8 group-hover:underline>
           {{ previousProject?.name }}
         </p>
       </button>
-      <button v-if="nextProject" ml-auto text-right @click="gotoProject(nextProject)">
+      <button v-if="nextProject" class="group" ml-auto text-right @click="gotoProject(nextProject)">
         <p text-default-5 dark:text-default-4>
           Next
         </p>
-        <p mt-0.8>
+        <p mt-0.8 group-hover:underline>
           {{ nextProject?.name }}
         </p>
       </button>
