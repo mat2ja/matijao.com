@@ -1,6 +1,6 @@
-# Portfolio 🍃
+# 🟠 Portfolio
 
-V2 of my portfolio site that never shipped
+[matijao.com](https://matijao.com)
 
 ## Setup
 
