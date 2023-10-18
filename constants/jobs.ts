@@ -1,3 +1,20 @@
+// create enum of months starting with index 0 for january
+export enum Month {
+  January,
+  February,
+  March,
+  April,
+  May,
+  June,
+  July,
+  August,
+  September,
+  October,
+  November,
+  December,
+}
+
+
 export const jobs = [
   {
     position: 'Frontend Developer',
@@ -6,7 +23,7 @@ export const jobs = [
       location: 'Zapresic, Croatia',
       url: 'https://www.4ofthem.eu/',
     },
-    from: new Date(2022, 8),
+    from: new Date(2022, Month.August),
     to: null,
     remote: true,
   },
@@ -17,8 +34,8 @@ export const jobs = [
       location: 'Cologne, Germany',
       url: 'https://cura4you.de',
     },
-    from: new Date(2023, 6),
-    to: null,
+    from: new Date(2023, Month.June),
+    to: new Date(2023, Month.October),
     remote: true,
   },
   {
@@ -28,8 +45,8 @@ export const jobs = [
       location: 'Zapresic, Croatia ',
       url: 'https://www.3ofthem.eu/',
     },
-    from: new Date(2021, 8),
-    to: new Date(2022, 7),
+    from: new Date(2021, Month.August),
+    to: new Date(2022, Month.July),
     remote: true,
   },
   {
@@ -39,8 +56,8 @@ export const jobs = [
       location: 'Split, Croatia',
       url: 'https://gis.infokarta.hr/',
     },
-    from: new Date(2021, 5),
-    to: new Date(2021, 7),
+    from: new Date(2021, Month.May),
+    to: new Date(2021, Month.July),
     remote: true,
   },
 ]

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { addMonths, differenceInMonths } from 'date-fns'
+import { addMonths, differenceInCalendarMonths } from 'date-fns'
 import { jobs } from '~~/constants'
 
 const formatDate = (date: Date) => {
@@ -13,7 +13,7 @@ const calculateDuration = (from: Date, to: Date | null) => {
   if (to === null)
     to = addMonths(new Date(), 1)
 
-  const months = differenceInMonths(addMonths(to, 1), from)
+  const months = differenceInCalendarMonths(to, from) + 1
   if (months < 12) {
     return `${months} months`
   }
