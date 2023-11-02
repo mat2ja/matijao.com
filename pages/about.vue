@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
   <div>
     <h2 text-4xl font-display mb-5>
@@ -32,9 +28,6 @@ figure img,
 }
 
 .img-shade {
-  position: absolute;
-  background-image: linear-gradient(-45deg, #FADD95 50%, #308469 50%);
-  border-radius: 50%;
   filter: blur(72px) opacity(100%);
   animation: pulse 9s cubic-bezier(0, 0, 0, 0.5) infinite;
 }

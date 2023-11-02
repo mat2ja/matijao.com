@@ -47,10 +47,7 @@ export default defineNuxtConfig({
     dirs: [
       'composables/**',
       'store/**',
-    ],
-    presets: [
-      'pinia',
-    ],
+    ]
   },
 
   css: [

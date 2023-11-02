@@ -7,7 +7,7 @@ const shownSkills = computed(() => favsOnly.value ? skills.filter(({ favorite })
 
 <template>
   <AboutSection title="Skills" icon="ph:toolbox-duotone">
-    <div  grid grid-cols="1 sm:2 lg:3" grid-rows="sm:6 lg:4" gap-4
+    <div grid grid-cols="1 sm:2 lg:3" grid-rows="sm:6 lg:4" gap-4
     >
       <NuxtLink
         v-for="item in shownSkills"
@@ -17,9 +17,11 @@ const shownSkills = computed(() => favsOnly.value ? skills.filter(({ favorite })
         external
         class="group"
       >
-        <article
+
+      <article
           select-none p-8 text-center h-full rounded-2xl transition-all duration-300
           class="backdrop-blur-md bg-default-50 dark:(bg-default-8/40) backdrop-blur-md border-2 border-default-2/40 dark:border-default-8/40 hover:(-translate-y-1)"
+
         >
           <div flex flex-col justify-center items-center gap-6>
             <Icon shrink-0 :name="item.icon" text-5xl />

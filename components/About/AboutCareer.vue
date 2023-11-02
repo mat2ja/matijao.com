@@ -14,23 +14,18 @@ const calculateDuration = (from: Date, to: Date | null) => {
     to = addMonths(new Date(), 1)
 
   const months = differenceInCalendarMonths(to, from) + 1
-  if (months < 12) {
-    return `${months} months`
-  }
-  else {
-    const years = Math.floor(months / 12)
-    const monthsLeft = months % 12
+  const years = Math.floor(months / 12)
+  const monthsLeft = months % 12
 
-    const formatPlural = (label: string, value: number) => `${label}${value > 1 ? 's' : ''}`
+  const formatPlural = (label: string, value: number) => `${label}${value > 1 ? 's' : ''}`
 
-    const monthFormat = formatPlural('month', monthsLeft)
-    const yearLabel = formatPlural('year', years)
+  const monthFormat = formatPlural('month', monthsLeft)
+  const yearLabel = formatPlural('year', years)
 
-    if (!monthsLeft)
-      return `${years} ${yearLabel}`
+  const yearString = years > 0 ? `${years} ${yearLabel}, ` : ''
+  const monthString = monthsLeft > 0 ? `${monthsLeft} ${monthFormat}` : ''
 
-    return `${years} ${yearLabel}, ${monthsLeft} ${monthFormat}`
-  }
+  return `${yearString}${monthString}`
 }
 </script>
 
