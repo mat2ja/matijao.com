@@ -84,7 +84,6 @@ export const projects: Project[] = [
     thumbnail: '/projects/comet.webp',
     categories: ['play'],
   },
-
   {
     name: 'Vue Ecosystem Snippets',
     description: 'Snippets for the modern Vue ecosystem',

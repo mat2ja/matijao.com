@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { socials } from '~/constants'
-
 const email =  {
   ...socials.email,
   label: `${socials.email.username.split('@')[0]}@matijao.com`,

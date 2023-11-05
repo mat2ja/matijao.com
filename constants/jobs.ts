@@ -19,7 +19,7 @@ export const jobs = [
   {
     position: 'Frontend Developer',
     company: {
-      name: 'Four of them LLC',
+      name: 'Four of them',
       location: 'Zapresic, Croatia',
       url: 'https://www.4ofthem.eu/',
     },
@@ -41,7 +41,7 @@ export const jobs = [
   {
     position: 'Junior Frontend Developer',
     company: {
-      name: 'Three of them Ltd',
+      name: 'Three of them',
       location: 'Zapresic, Croatia ',
       url: 'https://www.3ofthem.eu/',
     },

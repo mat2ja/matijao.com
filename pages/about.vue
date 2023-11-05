@@ -7,7 +7,7 @@
     <div space-y-20>
       <AboutBasicInfo />
 
-      <AboutCareer />
+      <AboutWork />
 
       <div class="border-2 bg-default-2/20 border-default-2/40 dark:bg-default-8/40 border-default-2/40 dark:border-default-8/40" p-6 md:p-8 rounded-2xl>
         <AboutEducation />

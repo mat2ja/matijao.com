@@ -16,11 +16,10 @@ export const useProject = ({ slug }: { slug: string }) => {
   })
 
   const nextProject = computed(() => {
-    console.log(allProjects)
     if (!isDefined(projectIndex))
       return undefined
 
-    return allProjects[projectIndex.value + 1] || undefined
+    return allProjects.at(projectIndex.value + 1)
   })
 
   return {

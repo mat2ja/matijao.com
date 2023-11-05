@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { addMonths, differenceInCalendarMonths } from 'date-fns'
-import { jobs } from '~~/constants'
 
 const formatDate = (date: Date) => {
   return new Intl.DateTimeFormat('en-US', {
@@ -30,7 +29,7 @@ const calculateDuration = (from: Date, to: Date | null) => {
 </script>
 
 <template>
-  <AboutSection title="Career" icon="ph:briefcase-duotone">
+  <AboutSection title="Work" icon="ph:briefcase-duotone">
     <div space-y-6 z-2>
       <div
         v-for="(job, i) in jobs"

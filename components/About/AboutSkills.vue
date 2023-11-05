@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { skills } from '~/constants'
-
 const favsOnly = ref(false)
 const shownSkills = computed(() => favsOnly.value ? skills.filter(({ favorite }) => !!favorite) : skills)
 </script>
