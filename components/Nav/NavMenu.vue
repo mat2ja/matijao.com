@@ -5,8 +5,6 @@ const items = ref<NavItem[]>([
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Projects', path: '/projects' },
-  // { name: 'Blog', path: '/blog' },
-  // { name: 'Contact', path: '/contact' },
 ])
 
 const route = useRoute()
@@ -23,6 +21,7 @@ const isLinkActive = (item: NavItem) => {
         v-for="(item, i) in items"
         :key="i"
         :to="item.path"
+        prefetch
         py-1 px-2.5 rounded-lg lowercase
         transition
         class="text-default-4 dark:text-default-5 hover:(text-primary)"

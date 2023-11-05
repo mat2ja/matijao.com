@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxtjs/critters',
     '@nuxtjs/robots',
     '@nuxt/devtools',
+    "@nuxt/image"
   ],
 
   vite: {
@@ -47,7 +48,7 @@ export default defineNuxtConfig({
     dirs: [
       'composables/**',
       'store/**',
-    ]
+    ],
   },
 
   css: [
