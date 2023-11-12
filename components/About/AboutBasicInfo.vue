@@ -1,16 +1,17 @@
 <script lang="ts" setup>
 import ResumePDF from '/Resume.pdf'
+import { isClient } from '@vueuse/core'
 
 const openPdf = () => {
-  // eslint-disable-next-line n/prefer-global/process
-  if (process.client)
+  if (isClient) {
     window.open(ResumePDF, '_blank')
+  }
 }
 </script>
 
 <template>
   <div flex items-center gap-24>
-    <div flex-1 space-y-4 leading-relaxed text-dimmed max-text>
+    <div max-text flex-1 leading-relaxed space-y-4 text-dimmed>
       <p>
         I'm an ambitious and determined front-end oriented software developer from Croatia, with a special attention to detail and a keen eye for UI/UX design.
       </p>

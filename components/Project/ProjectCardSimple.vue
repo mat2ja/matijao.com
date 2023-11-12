@@ -23,36 +23,55 @@ const openProject = () => {
 </script>
 
 <template>
-  <div flex items-center justify-between relative h-full class="group">
+  <div relative h-full flex items-center justify-between class="group">
     <div
-      h-full w-full max-w-full md:max-w-lg py-4 px-5 rounded-2xl cursor-pointer relative flex gap-4
-      class="lg:translate-y-1 transition border-2 bg-default-2/20 border-default-2/40 dark:bg-default-8/40 border-default-2/40 dark:border-default-8/40 hover:(lg:translate-y-0)"
+      relative
+      h-full
+      max-w-full
+      w-full
+      flex
+      cursor-pointer
+      gap-4
+      rounded-2xl
+      px-5
+      py-4
+      md:max-w-lg
+      class="border-2 border-default-2/40 border-default-2/40 bg-default-2/20 transition lg:translate-y-1 dark:border-default-8/40 dark:bg-default-8/40 hover:(lg:translate-y-0)"
       @click="openProject"
     >
-      <div flex-1 flex flex-col gap-2>
-        <div relative flex justify-between items-center>
+      <div flex flex-1 flex-col gap-2>
+        <div relative flex items-center justify-between>
           <div flex items-center gap-3>
             <h3
-              line-clamp-1 font-sans font-semibold text-xl flex-1
-              transition duration-300
-              class="-mx-0.5 -my-0.5 py-0.5 pb-0.5 px-1 rounded-sm underline decoration-transparent decoration-offset-3 decoration-wavy group-hover:(!decoration-accent-4)"
+
+              line-clamp-1
+              flex-1
+              text-xl
+              font-semibold
+              font-sans
+              transition
+              duration-300
+              class="rounded-sm px-1 py-0.5 pb-0.5 underline decoration-transparent decoration-offset-3 decoration-wavy -mx-0.5 -my-0.5 !group-hover:decoration-accent-4"
             >
               {{ project.name }}
             </h3>
 
             <Icon
               name="ph:arrow-right-bold"
-              text-lg transition duration-250 text-accent
-              class="invisible opacity-0 -translate-x-4 group-hover:(visible opacity-100 translate-x-0)"
+              text-lg
+              text-accent
+              transition
+              duration-250
+              class="invisible opacity-0 group-hover:(visible translate-x-0 opacity-100) -translate-x-4"
             />
           </div>
 
-          <div text-sm flex items-center gap-3 invisible group-hover:visible>
+          <div invisible flex items-center gap-3 text-sm group-hover:visible>
             <NuxtLink
               v-if="project.repo"
               :href="project.repo"
               target="_blank"
-              class="text-dimmed hover:text-current text-base"
+              class="text-base hover:text-current text-dimmed"
               @click.stop
             >
               <Icon name="ph:code-bold" />
@@ -61,7 +80,7 @@ const openProject = () => {
               v-if="project.url"
               :href="project.url"
               target="_blank"
-              class="text-dimmed hover:text-current text-base"
+              class="text-base hover:text-current text-dimmed"
               @click.stop
             >
               <Icon name="ph:arrow-up-right-bold" />
@@ -74,7 +93,7 @@ const openProject = () => {
         </p>
 
         <div mt-auto>
-          <div mt-2 flex items-center flex-wrap gap-1>
+          <div mt-2 flex flex-wrap items-center gap-1>
             <ProjectTag v-if="project.wip" variant="accent">
               wip
             </ProjectTag>

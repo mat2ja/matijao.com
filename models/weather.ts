@@ -1,3 +1,12 @@
+export type CurrentWeather = {
+  temperature: number
+  windspeed: number
+  winddirection: number
+  weathercode: number
+  is_day: number
+  time: string
+}
+
 export type WeatherResponse = {
   latitude: number
   longitude: number
@@ -7,15 +16,6 @@ export type WeatherResponse = {
   timezone_abbreviation: string
   elevation: number
   current_weather: CurrentWeather
-}
-
-export type CurrentWeather = {
-  temperature: number
-  windspeed: number
-  winddirection: number
-  weathercode: number
-  is_day: number
-  time: string
 }
 
 export type StateDescription = {

@@ -15,14 +15,18 @@ const isLinkActive = (item: NavItem) => {
 </script>
 
 <template>
-  <aside min-w-20 w-max lg:sticky top-20 lt-md:mx-auto>
+  <aside top-20 min-w-20 w-max lg:sticky lt-md:mx-auto>
     <nav flex="~ md:col" items-start>
       <NuxtLink
         v-for="(item, i) in items"
         :key="i"
         :to="item.path"
+
         prefetch
-        py-1 px-2.5 rounded-lg lowercase
+        rounded-lg
+        px-2.5
+        py-1
+        lowercase
         transition
         class="text-default-4 dark:text-default-5 hover:(text-primary)"
         :class="{

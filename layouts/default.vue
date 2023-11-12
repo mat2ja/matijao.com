@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <div row flex flex-col justify-between flex-1 h-full overflow-x-hidden>
-    <div grow py-8 pt="6 md:50" flex="~ col gap-10 md:(row gap-18)" items-start>
+  <div h-full flex flex-1 flex-col justify-between overflow-x-hidden row>
+    <div pt="6 md:50" flex="~ col gap-10 md:(row gap-18)" grow items-start py-8>
       <NavMenu />
 
-      <div flex-1 pb="12 md:28" w-full>
+      <div pb="12 md:28" w-full flex-1>
         <slot />
       </div>
     </div>

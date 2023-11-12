@@ -25,26 +25,25 @@ const schools = [
 
 <template>
   <AboutSection title="Education" icon="ph:student-duotone">
-    <div space-y-6 z-2>
+    <div z-2 space-y-6>
       <div v-for="(school, i) in schools" :key="i" flex flex-col gap-1>
-        <h6 text-lg leading-snug font-semibold>
+        <h6 text-lg font-semibold leading-snug>
           {{ school.degree }}
         </h6>
 
         <div flex items-center gap-2>
           <NuxtLink :to="school.url" target="_blank" external>
-            <span hyperlink transition>{{ school.name }}</span>
+            <span transition hyperlink>{{ school.name }}</span>
             <span text-opaque mx-1.5>&bullet;</span>
             <span text-xs font-bold uppercase>{{ school.nameShort }}</span>
           </NuxtLink>
-
         </div>
 
-        <p text-dimmed text-sm>
+        <p text-sm text-dimmed>
           {{ school.field }}
         </p>
 
-        <div text-dimmed text-sm flex items-center gap-2>
+        <div flex items-center gap-2 text-sm text-dimmed>
           <span>{{ school.from }} &ndash; {{ school.to }}</span>
           &bull;
           <span>{{ school.location }}</span>

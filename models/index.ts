@@ -5,6 +5,8 @@ export type NavItem = {
   path: string
 }
 
+export type ProjectCategory = 'featured' | 'projects' | 'play' | 'extensions' | 'starters'
+
 export type Project = {
   name: string
   description: string
@@ -17,8 +19,6 @@ export type Project = {
   images?: string[]
   categories: ProjectCategory[]
 }
-
-export type ProjectCategory = 'featured' | 'projects' | 'play' | 'extensions' | 'starters'
 
 export type SocialLink = {
   label: string

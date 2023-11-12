@@ -1,9 +1,5 @@
-<script lang="ts" setup>
-const { isDark } = useTheme()
-</script>
-
 <template>
-  <div id="grain" overflow="hidden" :class="[isDark ? 'opacity-8' : 'opacity-5']" />
+  <div id="grain" overflow="hidden" class="opacity-5 dark:opacity-8" />
 </template>
 
 <style scoped>

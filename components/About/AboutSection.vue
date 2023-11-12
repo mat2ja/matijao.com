@@ -10,7 +10,7 @@ defineProps<{
     <div flex items-center justify-between gap-4>
       <div flex items-center gap-3>
         <Icon v-if="icon" :name="icon" text-28px mb="1.6" />
-        <h3 font-display text-2xl>
+        <h3 text-2xl font-display>
           <slot name="title">
             {{ title }}
           </slot>

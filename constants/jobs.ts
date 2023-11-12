@@ -14,7 +14,6 @@ export enum Month {
   December,
 }
 
-
 export const jobs = [
   {
     position: 'Frontend Developer',

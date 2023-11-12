@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 text-4xl font-display mb-5>
+    <h2 mb-5 text-4xl font-display>
       About me
     </h2>
 
@@ -9,11 +9,11 @@
 
       <AboutWork />
 
-      <div class="border-2 bg-default-2/20 border-default-2/40 dark:bg-default-8/40 border-default-2/40 dark:border-default-8/40" p-6 md:p-8 rounded-2xl>
+      <div class="border-2 border-default-2/40 border-default-2/40 bg-default-2/20 dark:border-default-8/40 dark:bg-default-8/40" rounded-2xl p-6 md:p-8>
         <AboutEducation />
       </div>
 
-      <AboutCompetitions pt-6 pb-12 />
+      <AboutCompetitions pb-12 pt-6 />
 
       <AboutSkills />
     </div>

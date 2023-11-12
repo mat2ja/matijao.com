@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { Project } from '~/models'
 import { useMagicKeys } from '@vueuse/core'
+import type { Project } from '~/models'
 
 const params = useRoute()
 const { slug } = params.params as { slug: string }
@@ -8,9 +8,11 @@ const { slug } = params.params as { slug: string }
 const { project, previousProject, nextProject } = useProject({ slug })
 
 const images = computed(() => {
-  if (project.value?.images?.length)
-    return project.value.images
-  return project.value?.thumbnail ? [project.value?.thumbnail] : []
+  const { images, thumbnail } = project.value ?? {}
+  if (images?.length) {
+    return images
+  }
+  return thumbnail ? [thumbnail] : []
 })
 
 const gotoProject = (project: Project) => {
@@ -23,12 +25,14 @@ const gotoProject = (project: Project) => {
 }
 
 const toPrevious = () => {
-  if (previousProject.value)
+  if (previousProject.value) {
     gotoProject(previousProject.value)
+  }
 }
 const toNext = () => {
-  if (nextProject.value)
+  if (nextProject.value) {
     gotoProject(nextProject.value)
+  }
 }
 
 const { arrowLeft, arrowRight } = useMagicKeys()
@@ -44,11 +48,12 @@ whenever(arrowRight, () => toNext())
           Back
         </BaseButton>
 
-        <div flex items-center gap-2 shrink-0>
+        <div flex shrink-0 items-center gap-2>
           <BaseButton
             v-if="project.repo"
             :to="project.repo"
-            external new-tab
+            external
+            new-tab
             icon="ph:code-bold"
             icon-position="right"
           >
@@ -57,7 +62,8 @@ whenever(arrowRight, () => toNext())
           <BaseButton
             v-if="project.url"
             :to="project.url"
-            external new-tab
+            external
+            new-tab
             icon="ph:arrow-up-right-bold"
             icon-position="right"
             variant="primary"
@@ -66,13 +72,13 @@ whenever(arrowRight, () => toNext())
           </BaseButton>
         </div>
       </div>
-      <div flex items-start justify-between mt-8>
-        <h2 font-display text-4xl sm:text-5xl md:text-6xl>
+      <div mt-8 flex items-start justify-between>
+        <h2 text-4xl font-display md:text-6xl sm:text-5xl>
           {{ project.name }}
         </h2>
       </div>
 
-      <ul mt-4 flex items-center flex-wrap gap-2>
+      <ul mt-4 flex flex-wrap items-center gap-2>
         <ProjectTag v-if="project.wip" variant="accent">
           work in progress
         </ProjectTag>
@@ -92,14 +98,21 @@ whenever(arrowRight, () => toNext())
         :key="image"
       >
         <div
-          overflow-hidden rounded-xl border border-2 border-black dark:border-accent
+          overflow-hidden
+          border
+          border-2
+          border-black
+          rounded-xl
+          dark:border-accent
           w="full lg:720px"
           aspect-ratio="720/450"
         >
           <NuxtLink
 
+            :to="image"
+            target="_blank"
+            external
             relative
-            :to="image" target="_blank" external
           >
             <NuxtImg
               width="1440px"
@@ -112,7 +125,7 @@ whenever(arrowRight, () => toNext())
       </div>
     </div>
 
-    <div mt-24 pt-8 border-t border="t default-3/80 dark:default-7/80" flex items-center justify-between text-sm font-medium>
+    <div border="t default-3/80 dark:default-7/80" mt-24 flex items-center justify-between border-t pt-8 text-sm font-medium>
       <button v-if="previousProject" text-left class="group" @click="toPrevious">
         <p text-default-5 dark:text-default-4>
           Previous

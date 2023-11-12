@@ -9,8 +9,10 @@ const formatDate = (date: Date) => {
 }
 
 const calculateDuration = (from: Date, to: Date | null) => {
-  if (to === null)
+  if (to === null) {
+    // eslint-disable-next-line no-param-reassign
     to = addMonths(new Date(), 1)
+  }
 
   const months = differenceInCalendarMonths(to, from) + 1
   const years = Math.floor(months / 12)
@@ -30,21 +32,26 @@ const calculateDuration = (from: Date, to: Date | null) => {
 
 <template>
   <AboutSection title="Work" icon="ph:briefcase-duotone">
-    <div space-y-6 z-2>
+    <div z-2 space-y-6>
       <div
         v-for="(job, i) in jobs"
         :key="i"
-        flex flex-col gap-1
+        flex
+        flex-col
+        gap-1
       >
-        <h6 text-lg leading-snug font-semibold>
+        <h6 text-lg font-semibold leading-snug>
           {{ job.position }}
         </h6>
 
         <div flex items-center gap-2>
           <!-- TODO: move squiggly line on hover -->
           <NuxtLink
-            :to="job.company.url" target="_blank" external
-            hyperlink-wavy transition
+            :to="job.company.url"
+            target="_blank"
+            external
+            transition
+            hyperlink-wavy
 
             :class="{ '!decoration-accent': i === 0 }"
           >
@@ -54,7 +61,7 @@ const calculateDuration = (from: Date, to: Date | null) => {
           <span text-dimmed>{{ job.company.location }}</span>
         </div>
 
-        <div text-dimmed text-sm flex items-center gap-2 ml="0.5">
+        <div flex items-center gap-2 text-sm text-dimmed ml="0.5">
           <span>{{ formatDate(job.from) }} &ndash; {{ job.to ? formatDate(job.to) : 'Present' }}</span>
           &bull;
           <span>{{ calculateDuration(job.from, job.to) }}</span>

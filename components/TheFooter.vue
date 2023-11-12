@@ -9,8 +9,14 @@ const year = ref(new Date().getFullYear())
 <template>
   <footer z-100>
     <div
-      text-xs font-mono py-8 md:py-3
-      flex="~ col md:row" items-center justify-between text-dimmed
+      flex="~ col md:row"
+      items-center
+      justify-between
+      py-8
+      text-xs
+      font-mono
+      md:py-3
+      text-dimmed
     >
       <div flex items-center gap-1 class="footer-statusbar" rounded-r-full>
         <p flex items-center>
@@ -29,7 +35,7 @@ const year = ref(new Date().getFullYear())
         </NuxtLink>
       </div>
 
-      <div flex items-center justify-end gap-1.5 h-full class="footer-statusbar" rounded-l-full>
+      <div class="footer-statusbar" h-full flex items-center justify-end gap-1.5 rounded-l-full>
         <p>
           <Icon name="circle-flags:hr" text-11px />
           zagreb, croatia
@@ -40,9 +46,12 @@ const year = ref(new Date().getFullYear())
         <template v-if="weather">
           <div
             lt-md="hidden"
-            flex items-center gap-1 lowercase
+            flex
+            items-center
+            gap-1
+            lowercase
           >
-            <img :src="weather.image" alt="" h-3ch ml--1 mr-0>
+            <img :src="weather.image" alt="" ml--1 mr-0 h-3ch>
             <p>{{ Math.round(temperature) }}&deg;,</p>
 
             <p>{{ weather.description }}</p>
@@ -59,11 +68,12 @@ const year = ref(new Date().getFullYear())
         &middot;
 
         <button
+          flex
           cursor-pointer
+          items-center
           pr-1
-          hover:opacity-100
           text-sm
-          flex items-center
+          hover:opacity-100
           @click="toggleDark"
         >
           <Icon v-show="!isDark" name="ph:moon-duotone" />

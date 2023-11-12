@@ -9,7 +9,8 @@ withDefaults(defineProps<{
 <template>
   <span
     id="project-tag"
-    py="0.5" px-2
+    py="0.5"
+    px-2
     border="~ rounded-full"
     font="mono"
     class="text-11px"

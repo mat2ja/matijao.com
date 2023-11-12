@@ -7,12 +7,12 @@ export default defineNuxtConfig({
     '@vue-macros/nuxt',
     '@pinia/nuxt',
     'nuxt-icon',
-    '@nuxt/image-edge',
     '@nuxtjs/color-mode',
     '@nuxtjs/critters',
     '@nuxtjs/robots',
     '@nuxt/devtools',
-    "@nuxt/image"
+    '@nuxt/image',
+    '@nuxtjs/fontaine'
   ],
 
   vite: {
@@ -54,6 +54,7 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/styles/fonts.css',
+    // '~/assets/styles/style.css',
   ],
 
   postcss: {

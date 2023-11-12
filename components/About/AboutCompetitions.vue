@@ -1,5 +1,16 @@
 <script lang="ts" setup>
-const list = [
+type Competition = {
+  name: string
+  nameShort: string
+  url: string
+  project: string
+  from: string
+  to: string
+  additional?: string
+  description: string
+}
+
+const list: Competition[] = [
   {
     name: 'TVZ Mc2 2021',
     nameShort: 'TVZ',
@@ -24,48 +35,49 @@ const list = [
 
 <template>
   <AboutSection title="Competitions" icon="ph:trophy-duotone">
-    <div flex justify-between items-center relative>
-      <div space-y-6 z-2>
+    <div relative flex items-center justify-between>
+      <div z-2 space-y-6>
         <div v-for="(item, i) in list" :key="i" flex flex-col gap-1>
           <div flex items-center gap-1>
             <NuxtLink :to="item.url" target="_blank" external>
-              <h6 text-lg leading-snug font-semibold>
+              <h6 text-lg font-semibold leading-snug>
                 {{ item.name }}
               </h6>
             </NuxtLink>
           </div>
 
           <div flex items-center gap-2>
-            <NuxtLink :href="`/projects/${item.project.toLowerCase()}`" >
-              <span hyperlink transition>{{ item.project }}</span>
+            <NuxtLink :href="`/projects/${item.project.toLowerCase()}`">
+              <span transition hyperlink>{{ item.project }}</span>
               <template v-if="item.additional">
                 <span text-opaque mx-1.5>&bullet;</span>
                 <span>{{ item.additional }}</span>
               </template>
             </NuxtLink>
-
           </div>
 
           <div flex items-center gap-2>
-            <p text-dimmed text-sm>
+            <p text-sm text-dimmed>
               {{ item.description }}
             </p>
           </div>
 
-          <div text-dimmed text-sm flex items-center gap-2>
+          <div flex items-center gap-2 text-sm text-dimmed>
             <span>{{ item.from }} &ndash; {{ item.to }}</span>
           </div>
         </div>
       </div>
-      <div lt-md:hidden absolute right-0 class="top-50% right-20 translate-y--50% group">
+      <div absolute right-0 lt-md:hidden class="group right-20 top-50% translate-y--50%">
         <img
-          translate-y-8
-          translate-x-10
+
           src="/mc2-decode.jpeg"
           width="280"
+
+          class="group-hover:opacity-50 !hover:opacity-100"
+          translate-x-10
+          translate-y-8
           rotate-3
           rounded-2xl
-          class="group-hover:opacity-50 !hover:opacity-100"
           transition
         >
         <img
