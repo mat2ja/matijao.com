@@ -72,27 +72,29 @@ whenever(arrowRight, () => toNext())
           </BaseButton>
         </div>
       </div>
-      <div mt-8 flex items-start justify-between>
-        <h2 text-4xl font-display md:text-6xl sm:text-5xl>
-          {{ project.name }}
-        </h2>
-      </div>
+      <div slide-enter>
+        <div slide- mt-8 flex items-start justify-between>
+          <h2 text-4xl font-display md:text-6xl sm:text-5xl>
+            {{ project.name }}
+          </h2>
+        </div>
 
-      <ul mt-4 flex flex-wrap items-center gap-2>
-        <ProjectTag v-if="project.wip" variant="accent">
-          work in progress
-        </ProjectTag>
-        <ProjectTag v-for="tag in project.tags" :key="tag">
-          {{ tag }}
-        </ProjectTag>
-      </ul>
+        <ul mt-4 flex flex-wrap items-center gap-2>
+          <ProjectTag v-if="project.wip" variant="accent">
+            work in progress
+          </ProjectTag>
+          <ProjectTag v-for="tag in project.tags" :key="tag">
+            {{ tag }}
+          </ProjectTag>
+        </ul>
 
-      <div v-if="project.description" max-w="50ch" mt-6>
-        <p>{{ project.description }}</p>
+        <div v-if="project.description" max-w="50ch" mt-6>
+          <p>{{ project.description }}</p>
+        </div>
       </div>
     </div>
 
-    <div v-if="images?.length" mt-10>
+    <div v-if="images?.length" slide-enter mt-10>
       <div
         v-for="image in images"
         :key="image"
@@ -125,7 +127,7 @@ whenever(arrowRight, () => toNext())
       </div>
     </div>
 
-    <div border="t default-3/80 dark:default-7/80" mt-24 flex items-center justify-between border-t pt-8 text-sm font-medium>
+    <div border="t default-3/80 dark:default-7/80" slide-enter mt-24 flex items-center justify-between border-t pt-8 text-sm font-medium>
       <button v-if="previousProject" text-left class="group" @click="toPrevious">
         <p text-default-5 dark:text-default-4>
           Previous

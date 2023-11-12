@@ -6,7 +6,7 @@ export const useProject = ({ slug }: { slug: string }) => {
   }
 
   const project = computed(() => findProject(slug))
-  const projectIndex = computed(() => isDefined(project) ? allProjects.indexOf(project.value) : undefined)
+  const projectIndex = computed(() => isDefined(project) ? allProjects.indexOf(project.value!) : undefined)
 
   const previousProject = computed(() => {
     if (isDefined(projectIndex)) {

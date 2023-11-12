@@ -8,7 +8,7 @@ const { extensions, projects, starters, play } = useProjects()
       Projects
     </h2>
 
-    <div space-y-20>
+    <div slide-enter space-y-20>
       <section grid gap-5 lg:grid-cols-2 md:gap-4>
         <ProjectCardSimple
           v-for="(project, i) in projects"

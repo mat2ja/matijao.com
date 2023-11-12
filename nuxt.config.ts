@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
     '@vueuse/nuxt',
-    '@vue-macros/nuxt',
     '@pinia/nuxt',
     'nuxt-icon',
     '@nuxtjs/color-mode',
@@ -12,7 +11,6 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxt/devtools',
     '@nuxt/image',
-    '@nuxtjs/fontaine'
   ],
 
   vite: {
@@ -54,7 +52,7 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/styles/fonts.css',
-    // '~/assets/styles/style.css',
+    '~/assets/styles/style.css',
   ],
 
   postcss: {

@@ -4,7 +4,7 @@
       About me
     </h2>
 
-    <div space-y-20>
+    <div slide-enter slide-enter-content space-y-20>
       <AboutBasicInfo />
 
       <AboutWork />

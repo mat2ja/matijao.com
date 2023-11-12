@@ -21,7 +21,6 @@ const isLinkActive = (item: NavItem) => {
         v-for="(item, i) in items"
         :key="i"
         :to="item.path"
-
         prefetch
         rounded-lg
         px-2.5

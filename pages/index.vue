@@ -10,18 +10,30 @@ const socialLinks = [socials.github, socials.linkedin, socials.twitter, socials.
 <template>
   <div>
     <div lt-md:mt-8vh>
-      <h2 mb="3 sm:5" relative w-max text-4xl font-display md:text-7xl sm:text-5xl>
-        Matija Osrečki
-
+      <div relative w-max>
+        <h2 mb="3 sm:5" slide-enter text-4xl font-display md:text-7xl sm:text-5xl>
+          Matija Osrečki
+        </h2>
         <SVGCloud absolute pos="top--50 right--120 sm:(top--50 right--115) md:(top--60 right--85)" z--1 />
-      </h2>
+      </div>
 
-      <div max-text>
+      <div slide-enter max-text>
         <p text-dimmed>
           Internally driven front-end oriented software developer, very much in love with all things bitcoin & web development.
         </p>
 
-        <div class="group" mt-6 w-fit flex flex-col items-start gap-1 md:flex-row md:items-center md:gap-3>
+        <div
+          class="group"
+          mt-6
+          w-fit
+          flex
+          flex-col
+          items-start
+          gap-1
+          md:flex-row
+          md:items-center
+          md:gap-3
+        >
           <NuxtLink
             v-for="social in socialLinks"
             :key="social.href"
