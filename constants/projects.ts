@@ -133,7 +133,7 @@ export const projects: Project[] = [
     description: 'Nuxt 3 & UnoCSS starter template',
     year: 2023,
     repo: 'https://github.com/matijaoe/nuxt-starter',
-    url: 'https://nuxt-starter-iota.vercel.app/',
+    url: 'https://the-nuxt-starter.vercel.app/',
     tags: ['Nuxt', 'UnoCSS'],
     categories: ['starters'],
   },
