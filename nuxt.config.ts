@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxt/devtools',
     '@nuxt/image',
+    'nuxt-og-image'
   ],
 
   vite: {
