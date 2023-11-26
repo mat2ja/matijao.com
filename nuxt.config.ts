@@ -14,15 +14,10 @@ export default defineNuxtConfig({
     'nuxt-og-image'
   ],
 
-  vite: {
-    vue: {
-      script: {
-        defineModel: true,
-        propsDestructure: true,
-      },
-    },
+  vue: {
+    defineModel: true,
+    propsDestructure: true,
   },
-
   experimental: {
     typedPages: true,
   },

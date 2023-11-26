@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { useMagicKeys } from '@vueuse/core'
 import type { Project } from '~/models'
 
 const params = useRoute()
