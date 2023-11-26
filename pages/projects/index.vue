@@ -20,7 +20,7 @@ const { extensions, projects, starters, play } = useProjects()
 
       <div>
         <h3 mb-4 text-3xl font-display>
-          Personal
+          Play
         </h3>
         <section grid gap-x-5 gap-y-4 md:grid-cols-2>
           <ProjectCardSimple

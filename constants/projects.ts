@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     wip: true,
     name: 'Polenta',
-    description: 'Advanced Bitcoin wallet management app',
+    description: 'Advanced Bitcoin wallet management',
     tags: ['Nuxt', 'Vue', 'Tailwind', 'Firebase'],
     year: 2021,
     repo: 'https://github.com/matijaoe/polenta',
@@ -41,7 +41,7 @@ export const projects: Project[] = [
   },
   {
     name: 'matijao.com',
-    description: 'The site you are admiring right now.',
+    description: 'The very website you\'re looking at right now.',
     tags: ['Nuxt', 'Vue', 'TypeScript', 'UnoCSS'],
     year: 2023,
     repo: 'https://github.com/matijaoe/matijao.com',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   },
   {
     name: 'BTC Tools',
-    description: 'BIP39 word search tool',
+    description: 'BIP-39 word lookup tool',
     tags: ['Svelte', 'TypeScript', 'Tailwind'],
     year: 2022,
     repo: 'https://github.com/matijaoe/bip39-words',
