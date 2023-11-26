@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     name: 'Fare',
     description: 'Application for tracking personal finances and attaining financial independence.',
-    tags: ['Nuxt', 'Vue', 'TypeScript', 'UnoCSS', 'Prisma'],
+    tags: ['Nuxt', 'TypeScript', 'UnoCSS', 'Prisma'],
     year: 2022,
     repo: 'https://github.com/matijaoe/fire-zavrsni',
     thumbnail: '/projects/fare.webp',
@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     name: 'Qwiz',
     description: 'Platform for creation, organization & discovery of pub quizzes.',
-    tags: ['Next', 'React', 'TypeScript', 'Nest', 'Prisma'],
+    tags: ['Next', 'TypeScript', 'Nest', 'Prisma'],
     year: 2022,
     repo: 'https://github.com/qwiz-app/qwiz',
     url: 'https://app.qwiz.party',
@@ -23,7 +23,7 @@ export const projects: Project[] = [
   {
     name: 'Aimo',
     description: 'Social media platform connecting motivated individuals with accountability partners.',
-    tags: ['Nuxt', 'Vue', 'Tailwind', 'Firebase'],
+    tags: ['Nuxt', 'Tailwind', 'Firebase'],
     year: 2021,
     repo: 'https://github.com/matijaoe/aimo',
     url: 'https://aimo.vercel.app',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     wip: true,
     name: 'Polenta',
     description: 'Advanced Bitcoin wallet management',
-    tags: ['Nuxt', 'Vue', 'Tailwind', 'Drizzle', 'SQLite'],
+    tags: ['Nuxt', 'Tailwind', 'Drizzle'],
     year: 2021,
     repo: 'https://github.com/matijaoe/polenta',
     categories: ['projects'],
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     name: 'matijao.com',
     // Homepage pre-rendered at build time
     description: 'The very website you\'re looking at right now.',
-    tags: ['Nuxt', 'Vue', 'TypeScript', 'UnoCSS'],
+    tags: ['Nuxt', 'TypeScript', 'UnoCSS'],
     year: 2023,
     repo: 'https://github.com/matijaoe/matijao.com',
     url: 'https://matijao.com',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     categories: ['play'],
   },
   {
-    name: 'BTC Tools',
+    name: 'bip39 words',
     description: 'BIP-39 word lookup tool',
     tags: ['Svelte', 'TypeScript', 'Tailwind'],
     year: 2022,
@@ -63,7 +63,7 @@ export const projects: Project[] = [
   {
     name: 'Favicônes',
     description: 'Quick and easy way to use any icon as favicon.',
-    tags: ['Nuxt', 'Vue', 'UnoCSS'],
+    tags: ['Nuxt', 'UnoCSS', 'iconify'],
     year: 2022,
     repo: 'https://github.com/matijaoe/favicones',
     url: 'https://favicones.vercel.app/',
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     year: 2023,
     repo: 'https://github.com/matijaoe/nuxt-starter',
     url: 'https://the-nuxt-starter.vercel.app/',
-    tags: ['Nuxt', 'UnoCSS'],
+    tags: ['Nuxt', 'UnoCSS', 'TypeScript'],
     categories: ['starters'],
   },
   {
