@@ -34,13 +34,14 @@ export const projects: Project[] = [
     wip: true,
     name: 'Polenta',
     description: 'Advanced Bitcoin wallet management',
-    tags: ['Nuxt', 'Vue', 'Tailwind', 'Firebase'],
+    tags: ['Nuxt', 'Vue', 'Tailwind', 'Drizzle', 'SQLite'],
     year: 2021,
     repo: 'https://github.com/matijaoe/polenta',
     categories: ['projects'],
   },
   {
     name: 'matijao.com',
+    // Homepage pre-rendered at build time
     description: 'The very website you\'re looking at right now.',
     tags: ['Nuxt', 'Vue', 'TypeScript', 'UnoCSS'],
     year: 2023,
