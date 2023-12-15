@@ -2,9 +2,9 @@
   <div id="grain" overflow="hidden" class="opacity-5 dark:opacity-8" />
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 #grain {
-  background-image: url('assets/images/grainy.png');
+  background-image: url('assets/images/bg-grain.png');
   background-repeat: repeat;
   position: fixed;
   width: 600%;
@@ -14,6 +14,12 @@
   animation: home-grain 14s steps(10) infinite;
   pointer-events: none;
   z-index: 9999;
+}
+
+.dark {
+  #grain {
+    background-image: url('assets/images/bg-grain-dark.png');
+  }
 }
 
 @keyframes home-grain {
