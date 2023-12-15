@@ -28,7 +28,7 @@ withDefaults(defineProps<{
   }
 
   &.variant-accent {
-    @apply bg-accent-400/85 dark:bg-accent-500 dark:filter-saturate-80 text-default-9 !border-transparent font-semibold;
+    @apply bg-accent dark:filter-saturate-80 text-default-9 !border-transparent font-semibold;
   }
 }
 </style>

@@ -9,12 +9,12 @@ defineProps<{
   <section relative space-y-4>
     <div flex items-center justify-between gap-4>
       <div flex items-center gap-3>
-        <Icon v-if="icon" :name="icon" text-28px mb="1.6" />
-        <h3 text-2xl font-display>
+        <Icon v-if="icon" :name="icon" text-28px />
+        <h2 text-3xl font-bold font-display italic>
           <slot name="title">
             {{ title }}
           </slot>
-        </h3>
+        </h2>
       </div>
 
       <slot name="right" />

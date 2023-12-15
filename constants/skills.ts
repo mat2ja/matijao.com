@@ -80,6 +80,14 @@ export const skills = [
     url: 'https://nodejs.org',
   },
   {
+    name: 'Bun',
+    value: 'bun',
+    icon: 'logos:bun',
+    favorite: false,
+    desc: 'Incredibly fast JavaScript runtime, bundler, test runner, and package manager',
+    url: 'https://bun.sh',
+  },
+  {
     name: 'Prisma',
     value: 'prisma',
     icon: 'logos:prisma',
@@ -87,12 +95,5 @@ export const skills = [
     url: 'https://prisma.io',
     desc: 'Next-generation Node.js and TypeScript ORM',
   },
-  {
-    name: 'MySQL',
-    value: 'postgresql',
-    icon: 'logos:mysql',
-    favorite: false,
-    desc: 'World\'s most popular open source database',
-    url: 'https://www.mysql.com/',
-  },
+
 ]

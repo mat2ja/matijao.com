@@ -46,7 +46,8 @@ export default defineNuxtConfig({
   },
 
   css: [
-    '~/assets/styles/fonts.css',
+    '~/assets/styles/palmtick.css',
+    '~/assets/styles/geist.css',
     '~/assets/styles/style.css',
   ],
 

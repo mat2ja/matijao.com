@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2 mb-5 text-4xl font-display>
-      About me
+    <h2 mb-5 text-4xl font-bold font-display italic>
+      About
     </h2>
 
     <div slide-enter slide-enter-content space-y-20>

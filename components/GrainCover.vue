@@ -1,5 +1,5 @@
 <template>
-  <div id="grain" overflow="hidden" class="opacity-5 dark:opacity-8" />
+  <div id="grain" overflow="hidden" class="opacity-45 dark:opacity-15" />
 </template>
 
 <style scoped lang="postcss">

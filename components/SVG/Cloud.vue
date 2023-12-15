@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const styles = 'fill-default-2/40 dark:fill-default-8/40'
+const styles = 'fill-default-2/40 dark:fill-default-8/35'
 </script>
 
 <template>

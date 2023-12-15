@@ -10,16 +10,20 @@ const socialLinks = [socials.github, socials.linkedin, socials.twitter, socials.
 <template>
   <div>
     <div lt-md:mt-8vh>
-      <div relative w-max>
-        <h2 mb="3 sm:5" slide-enter text-4xl font-display md:text-7xl sm:text-5xl>
-          Matija Osrečki
+      <div relative w-full>
+        <h2 mb="3 sm:5" class="md:text-5.75rem" slide-enter text-4xl font-800 font-display italic sm:text-5xl>
+          I'm <span class="my-name text-accent">Matija</span>
         </h2>
-        <SVGCloud absolute pos="top--50 right--120 sm:(top--50 right--115) md:(top--60 right--85)" z--1 />
+        <SVGCloud absolute pos="top--50 right--15 sm:(top--50 right--15) md:(top--55 right--15)" z--1 />
       </div>
 
+      <p mb="5 sm:6" class="md:text-2xl" slide-enter text-4xl font-900 italic sm:text-5xl>
+        I punch codes into computers until things happen
+      </p>
+
       <div slide-enter max-text>
-        <p text-dimmed>
-          Internally driven front-end oriented software developer, very much in love with all things bitcoin & web development.
+        <p max-w-sm text-dimmed>
+          A software engineer from Croatia,<br> enthusiastically unraveling the web's complexities.
         </p>
 
         <div
@@ -54,3 +58,23 @@ const socialLinks = [socials.github, socials.linkedin, socials.twitter, socials.
     </div>
   </div>
 </template>
+
+<style lang="postcss" scoped>
+@keyframes fontVariation {
+  from {
+    font-variation-settings: 'wght' 900;
+  }
+  to {
+    font-variation-settings: 'wght' 300;
+  }
+}
+
+.font-animate {
+  animation: fontVariation 5s infinite alternate;
+}
+
+.light .my-name {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #262626;
+}
+</style>

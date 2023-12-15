@@ -73,7 +73,7 @@ whenever(arrowRight, () => toNext())
       </div>
       <div slide-enter>
         <div slide- mt-8 flex items-start justify-between>
-          <h2 text-4xl font-display md:text-6xl sm:text-5xl>
+          <h2 text-4xl font-bold font-display md:text-6xl sm:text-5xl>
             {{ project.name }}
           </h2>
         </div>
@@ -139,7 +139,7 @@ whenever(arrowRight, () => toNext())
         <p text-default-5 dark:text-default-4>
           Next
         </p>
-        <p mt-0.8 group-hover:underline>
+        <p mt-0.8 font-bold group-hover:underline>
           {{ nextProject?.name }}
         </p>
       </button>

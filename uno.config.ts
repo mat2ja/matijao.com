@@ -22,8 +22,8 @@ export default defineConfig({
           provider: 'fontshare',
         },
         display: {
-          name: 'Palmtick',
-          provider: 'none',
+          name: 'Clash Display',
+          provider: 'fontshare',
         },
         mono: {
           name: 'DM Mono',
@@ -34,8 +34,8 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      accent: theme.colors?.orange,
       default: theme.colors?.neutral,
+      accent: '#CCFF00',
     },
   },
   transformers: [
@@ -48,6 +48,6 @@ export default defineConfig({
     'text-primary': 'text-default-8 dark:text-default-2',
     'text-dimmed': 'text-default-7 dark:text-default-4',
     'hyperlink': 'transition -mx-0.5 -my-0.5 py-0.5 px-1 rounded-sm underline decoration-default-8/20 dark:decoration-default-2/20 decoration-offset-2 hover:(!decoration-accent)',
-    'hyperlink-wavy': 'transition -mx-0.5 -my-0.5 py-0.5 px-1 rounded-sm underline decoration-default-8/20 dark:decoration-default-2/20 decoration-offset-3 decoration-wavy hover:(!decoration-accent-4)',
+    'hyperlink-wavy': 'transition -mx-0.5 -my-0.5 py-0.5 px-1 rounded-sm underline decoration-default-8/20 dark:decoration-default-2/20 decoration-offset-3 decoration-wavy hover:(!decoration-accent)',
   },
 })

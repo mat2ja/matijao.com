@@ -47,11 +47,11 @@ const openProject = () => {
               line-clamp-1
               flex-1
               text-xl
-              font-semibold
+              font-bold
               font-sans
               transition
               duration-300
-              class="rounded-sm px-1 py-0.5 pb-0.5 underline decoration-transparent decoration-offset-3 decoration-wavy -mx-0.5 -my-0.5 !group-hover:decoration-accent-4"
+              class="rounded-sm px-1 py-0.5 pb-0.5 underline decoration-transparent decoration-offset-3 decoration-wavy -mx-0.5 -my-0.5 !group-hover:decoration-accent"
             >
               {{ project.name }}
             </h3>

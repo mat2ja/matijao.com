@@ -4,7 +4,7 @@ const { extensions, projects, starters, play } = useProjects()
 
 <template>
   <div>
-    <h2 mb-5 text-4xl font-display>
+    <h2 mb-5 text-4xl font-bold font-display italic>
       Projects
     </h2>
 
@@ -19,7 +19,7 @@ const { extensions, projects, starters, play } = useProjects()
       </section>
 
       <div>
-        <h3 mb-4 text-3xl font-display>
+        <h3 mb-4 text-3xl font-bold font-display italic>
           Play
         </h3>
         <section grid gap-x-5 gap-y-4 md:grid-cols-2>
@@ -33,7 +33,7 @@ const { extensions, projects, starters, play } = useProjects()
       </div>
 
       <div>
-        <h3 mb-4 text-3xl font-display>
+        <h3 mb-4 text-3xl font-bold font-display italic>
           Extensions & plugins
         </h3>
         <section grid gap-x-5 gap-y-4 md:grid-cols-2>
@@ -47,7 +47,7 @@ const { extensions, projects, starters, play } = useProjects()
       </div>
 
       <div>
-        <h3 mb-4 text-3xl font-display>
+        <h3 mb-4 text-3xl font-bold font-display italic>
           Starter templates
         </h3>
         <section grid gap-x-5 gap-y-4 md:grid-cols-2>
