@@ -17,7 +17,7 @@ const socialLinks = [socials.github, socials.linkedin, socials.twitter, socials.
         <SVGCloud absolute pos="top--50 right--15 sm:(top--50 right--15) md:(top--55 right--15)" z--1 />
       </div>
 
-      <p class="text-neutral-100/70 md:text-2xl" slide-enter max-w-sm text-3xl font-light italic sm:text-5xl>
+      <p class="text-neutral-800/80 md:text-2xl dark:text-neutral-100/70" slide-enter max-w-sm text-3xl font-light italic sm:text-5xl>
         A frontend software engineer,<br> enthusiastically unraveling the <span>web's</span> complexities.
       </p>
 

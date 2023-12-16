@@ -17,15 +17,19 @@ export default defineConfig({
     presetWebFonts({
       provider: 'google',
       fonts: {
-        sans: {
-          name: 'Satoshi',
+        'sans': {
+          name: 'SatoshiVariable',
           provider: 'fontshare',
         },
-        display: {
+        'sans-italic': {
+          name: 'SatoshiVariableItalic',
+          provider: 'fontshare',
+        },
+        'display': {
           name: 'Clash Display',
           provider: 'fontshare',
         },
-        mono: {
+        'mono': {
           name: 'DM Mono',
           provider: 'bunny',
         },
