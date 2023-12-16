@@ -10,33 +10,23 @@ const socialLinks = [socials.github, socials.linkedin, socials.twitter, socials.
 <template>
   <div>
     <div lt-md:mt-8vh>
-      <div relative w-full>
-        <h2 mb="3 sm:5" class="text-5xl md:text-5.75rem" slide-enter font-800 font-display italic sm:text-5xl>
+      <div relative mb-3 w-full>
+        <h2 class="text-5xl md:text-5.75rem" slide-enter font-800 font-display italic sm:text-5xl>
           I'm <span class="my-name text-accent">Matija</span>
         </h2>
         <SVGCloud absolute pos="top--50 right--15 sm:(top--50 right--15) md:(top--55 right--15)" z--1 />
       </div>
 
-      <p mb="5 sm:6" class="md:text-2xl" slide-enter max-w-sm text-4xl font-900 italic sm:text-5xl>
-        I punch codes into computer<wbr> until thing does the thing
+      <p class="text-neutral-100/70 md:text-2xl" slide-enter max-w-sm text-3xl font-light italic sm:text-5xl>
+        A frontend software engineer,<br> enthusiastically unraveling the <span>web's</span> complexities.
       </p>
 
-      <div slide-enter max-text>
-        <p max-w-sm text-dimmed>
-          A software engineer from Croatia,<br> enthusiastically unraveling the web's complexities.
-        </p>
-
+      <div slide-enter mt-8 max-text>
         <div
           class="group"
           mt-6
           w-fit
-          flex
-          flex-col
-          items-start
-          gap-1
-          md:flex-row
-          md:items-center
-          md:gap-3
+          flex="~ col gap-1 items-start md:(row gap-3 items-center)"
         >
           <NuxtLink
             v-for="social in socialLinks"

@@ -27,7 +27,7 @@ export default defineConfig({
         },
         mono: {
           name: 'DM Mono',
-          provider: 'google',
+          provider: 'bunny',
         },
       },
     }),

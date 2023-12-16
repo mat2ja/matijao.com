@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 mb-5 text-4xl font-bold font-display italic>
+    <h2 mb-5 text-4xl font-semibold font-display italic>
       About
     </h2>
 

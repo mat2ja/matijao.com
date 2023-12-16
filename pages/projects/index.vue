@@ -4,7 +4,7 @@ const { extensions, projects, starters, play } = useProjects()
 
 <template>
   <div>
-    <h2 mb-5 text-4xl font-bold font-display italic>
+    <h2 mb-5 text-4xl font-semibold font-display italic>
       Projects
     </h2>
 
@@ -18,10 +18,10 @@ const { extensions, projects, starters, play } = useProjects()
         />
       </section>
 
-      <div>
-        <h3 mb-4 text-3xl font-bold font-display italic>
+      <div class="space-y-4">
+        <SectionTitle>
           Play
-        </h3>
+        </SectionTitle>
         <section grid gap-x-5 gap-y-4 md:grid-cols-2>
           <ProjectCardSimple
             v-for="(project, i) in play"
@@ -32,10 +32,10 @@ const { extensions, projects, starters, play } = useProjects()
         </section>
       </div>
 
-      <div>
-        <h3 mb-4 text-3xl font-bold font-display italic>
+      <div class="space-y-4">
+        <SectionTitle>
           Extensions & plugins
-        </h3>
+        </SectionTitle>
         <section grid gap-x-5 gap-y-4 md:grid-cols-2>
           <ProjectCardSimple
             v-for="(project, i) in extensions"
@@ -46,10 +46,10 @@ const { extensions, projects, starters, play } = useProjects()
         </section>
       </div>
 
-      <div>
-        <h3 mb-4 text-3xl font-bold font-display italic>
+      <div class="space-y-4">
+        <SectionTitle>
           Starter templates
-        </h3>
+        </SectionTitle>
         <section grid gap-x-5 gap-y-4 md:grid-cols-2>
           <ProjectCardSimple
             v-for="(project, i) in starters"

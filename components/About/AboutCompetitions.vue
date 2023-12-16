@@ -39,7 +39,7 @@ const list: Competition[] = [
       <div z-2 space-y-6>
         <div v-for="(item, i) in list" :key="i" flex flex-col gap-1>
           <div flex items-center gap-1>
-            <NuxtLink :to="item.url" target="_blank" external>
+            <NuxtLink :to="item.url" target="_blank" external hover:underline>
               <h6 text-lg font-semibold leading-snug>
                 {{ item.name }}
               </h6>

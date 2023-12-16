@@ -3,21 +3,19 @@ const { isDark, toggleDark } = useTheme()
 const { formattedTime } = useClock()
 const { weather, temperature, weatherIcon, pending: weatherPending } = await useWeatherInfo()
 
-const formattedTimeVisible = ref(false)
+const isMounted = ref(false)
 onMounted(() => {
-  formattedTimeVisible.value = true
+  isMounted.value = true
 })
 
 const year = ref(new Date().getFullYear())
 </script>
 
 <template>
-  <footer z-100 py-4>
+  <footer z-100 py-3>
     <div>
       <div
-        flex="~ col md:row"
-        items-center
-        justify-between
+        flex="~ col md:row items-center justify-between"
         text-xs
         font-mono
         md:h-22px
@@ -72,7 +70,7 @@ const year = ref(new Date().getFullYear())
 
           &middot;
 
-          <p v-if="formattedTimeVisible">
+          <p v-if="isMounted">
             {{ formattedTime }}
           </p>
           <div
@@ -83,21 +81,26 @@ const year = ref(new Date().getFullYear())
           &middot;
 
           <div flex items-center gap-2>
-            <button
-              flex
-              cursor-pointer
-              items-center
-              pr-1
-              text-sm
-              hover:opacity-100
-              :aria-label="`Toggle ${isDark ? 'light' : 'dark'} mode`"
-              :title="`Toggle ${isDark ? 'light' : 'dark'} mode`"
-              @click="toggleDark"
-            >
-              <Icon v-show="!isDark" name="ph:moon-fill" />
-              <Icon v-show="isDark" name="ph:sun-fill" />
-            </button>
-
+            <div class="mr-1">
+              <div
+                v-if="!isMounted"
+                class="h-1.75ch w-14px animate-pulse rounded-full bg-default-200 dark:bg-default-700"
+              />
+              <button
+                v-else
+                flex
+                cursor-pointer
+                items-center
+                text-sm
+                hover:opacity-100
+                :aria-label="`Toggle ${isDark ? 'light' : 'dark'} mode`"
+                :title="`Toggle ${isDark ? 'light' : 'dark'} mode`"
+                @click="toggleDark"
+              >
+                <Icon v-show="!isDark" name="ph:moon-fill" />
+                <Icon v-show="isDark" name="ph:sun-fill" />
+              </button>
+            </div>
             <Icon name="logos:nuxt-icon" class="text-16px" />
           </div>
         </div>

@@ -9,11 +9,11 @@ defineProps<{
   <section relative space-y-4>
     <div flex items-center justify-between gap-4>
       <div flex items-center gap-3>
-        <h2 text-3xl font-bold font-display italic>
+        <SectionTitle>
           <slot name="title">
             {{ title }}
           </slot>
-        </h2>
+        </SectionTitle>
       </div>
 
       <slot name="right" />
