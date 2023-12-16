@@ -37,10 +37,20 @@ export const useWeatherInfo = async () => {
     return (weatherDescriptionJson as WeatherDescription)[weatherCode.value][currentWeather.value.is_day ? 'day' : 'night']
   })
 
+  const weatherIcon = computed(() => {
+    let imgUrl = weatherDescription.value?.image
+    if (imgUrl?.startsWith('http://')) {
+      imgUrl = imgUrl.replace('http://', 'https://')
+    }
+
+    return imgUrl
+  })
+
   const temperature = computed(() => Math.round(currentWeather.value?.temperature || 0))
 
   return {
     weather: weatherDescription,
+    weatherIcon,
     temperature,
     pending,
   }

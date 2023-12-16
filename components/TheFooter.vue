@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { isDark, toggleDark } = useTheme()
 const { formattedTime } = useClock()
-const { weather, temperature, pending: weatherPending } = await useWeatherInfo()
+const { weather, temperature, weatherIcon, pending: weatherPending } = await useWeatherInfo()
 
 const formattedTimeVisible = ref(false)
 onMounted(() => {
@@ -55,7 +55,7 @@ const year = ref(new Date().getFullYear())
                 gap-1
                 lowercase
               >
-                <img :src="weather.image" alt="" ml--1 mr-0 h-3ch>
+                <img :src="weatherIcon" alt="" ml--1 mr-0 h-3ch>
                 <p>{{ Math.round(temperature) }}&deg;,</p>
 
                 <p>{{ weather.description }}</p>
@@ -90,6 +90,8 @@ const year = ref(new Date().getFullYear())
               pr-1
               text-sm
               hover:opacity-100
+              :aria-label="`Toggle ${isDark ? 'light' : 'dark'} mode`"
+              :title="`Toggle ${isDark ? 'light' : 'dark'} mode`"
               @click="toggleDark"
             >
               <Icon v-show="!isDark" name="ph:moon-fill" />

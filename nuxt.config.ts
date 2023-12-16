@@ -76,6 +76,13 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       ],
+      meta: [
+        {
+          name: 'description',
+          content: 'Matija Osrečki is a frontend software engineer from Croatia.',
+        }
+      ]
     },
+
   },
 })
