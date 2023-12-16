@@ -48,22 +48,6 @@ export const skills = [
     url: 'https://tanstack.com/query',
   },
   {
-    name: 'Svelte',
-    value: 'svelte',
-    icon: 'logos:svelte-icon',
-    favorite: true,
-    desc: 'Cybernetically enhanced web apps',
-    url: 'https://svelte.dev',
-  },
-  {
-    name: 'React',
-    value: 'react',
-    icon: 'logos:react',
-    favorite: false,
-    desc: 'The library for web and native user interfaces',
-    url: 'https://react.dev',
-  },
-  {
     name: 'Vite',
     value: 'vite',
     icon: 'logos:vitejs',
@@ -84,16 +68,7 @@ export const skills = [
     value: 'bun',
     icon: 'logos:bun',
     favorite: false,
-    desc: 'Incredibly fast JavaScript runtime, bundler, test runner, and package manager',
+    desc: 'Incredibly fast JavaScript runtime',
     url: 'https://bun.sh',
   },
-  {
-    name: 'Prisma',
-    value: 'prisma',
-    icon: 'logos:prisma',
-    favorite: true,
-    url: 'https://prisma.io',
-    desc: 'Next-generation Node.js and TypeScript ORM',
-  },
-
 ]

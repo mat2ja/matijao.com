@@ -34,7 +34,7 @@ const list: Competition[] = [
 </script>
 
 <template>
-  <AboutSection title="Competitions" icon="ph:trophy-duotone">
+  <AboutSection title="Competitions" icon="ph:trophy-bold">
     <div relative flex items-center justify-between>
       <div z-2 space-y-6>
         <div v-for="(item, i) in list" :key="i" flex flex-col gap-1>
@@ -66,29 +66,6 @@ const list: Competition[] = [
             <span>{{ item.from }} &ndash; {{ item.to }}</span>
           </div>
         </div>
-      </div>
-      <div absolute right-0 lt-md:hidden class="group right-20 top-50% translate-y--50%">
-        <img
-
-          src="/mc2-decode.jpeg"
-          width="280"
-
-          class="group-hover:opacity-50 !hover:opacity-100"
-          translate-x-10
-          translate-y-8
-          rotate-3
-          rounded-2xl
-          transition
-        >
-        <img
-          translate-y--10
-          src="/mc2-win.jpeg"
-          width="280"
-          rotate-6
-          class="group-hover:opacity-50 !hover:opacity-100"
-          rounded-2xl
-          transition
-        >
       </div>
     </div>
   </AboutSection>

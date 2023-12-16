@@ -164,4 +164,12 @@ export const projects: Project[] = [
     tags: ['Vue', 'UnoCSS'],
     categories: ['starters'],
   },
+  {
+    name: 'Advent of Code Template',
+    description: 'Automatic Advent of Code Template',
+    year: 2023,
+    repo: 'https://github.com/matijaoe/advent-of-code',
+    tags: ['Bun', 'TypeScript'],
+    categories: ['starters'],
+  },
 ]

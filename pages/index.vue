@@ -18,7 +18,7 @@ const socialLinks = [socials.github, socials.linkedin, socials.twitter, socials.
       </div>
 
       <p mb="5 sm:6" class="md:text-2xl" slide-enter text-4xl font-900 italic sm:text-5xl>
-        I punch codes into computers until things happen
+        I punch codes into computer until thing does the thing
       </p>
 
       <div slide-enter max-text>

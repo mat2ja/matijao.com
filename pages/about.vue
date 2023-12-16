@@ -4,7 +4,7 @@
       About
     </h2>
 
-    <div slide-enter slide-enter-content space-y-20>
+    <div slide-enter slide-enter-content space-y-16>
       <AboutBasicInfo />
 
       <AboutWork />
@@ -13,7 +13,7 @@
         <AboutEducation />
       </div>
 
-      <AboutCompetitions pb-12 pt-6 />
+      <AboutCompetitions />
 
       <AboutSkills />
     </div>

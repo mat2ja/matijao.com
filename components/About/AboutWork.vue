@@ -31,7 +31,7 @@ const calculateDuration = (from: Date, to: Date | null) => {
 </script>
 
 <template>
-  <AboutSection title="Work" icon="ph:briefcase-duotone">
+  <AboutSection title="Work" icon="ph:briefcase-bold">
     <div z-2 space-y-6>
       <div
         v-for="(job, i) in jobs"
@@ -53,7 +53,7 @@ const calculateDuration = (from: Date, to: Date | null) => {
             transition
             hyperlink-wavy
 
-            :class="{ '!decoration-accent': i === 0 }"
+            :class="{ 'decoration-current dark:decoration-accent': i === 0 }"
           >
             {{ job.company.name }}
           </NuxtLink>

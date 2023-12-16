@@ -76,8 +76,8 @@ const year = ref(new Date().getFullYear())
           hover:opacity-100
           @click="toggleDark"
         >
-          <Icon v-show="!isDark" name="ph:moon-duotone" />
-          <Icon v-show="isDark" name="ph:sun-duotone" />
+          <Icon v-show="!isDark" name="ph:moon-bold" />
+          <Icon v-show="isDark" name="ph:sun-bold" />
         </button>
 
         <Icon name="logos:nuxt-icon" text-sm />

@@ -16,10 +16,10 @@ const openPdf = () => {
         I'm an ambitious and determined front-end oriented software developer from Croatia, with a special attention to detail and a keen eye for UI/UX design.
       </p>
       <p>
-        Most passionate about building products, UX design, clean code, open source and bitcoin.
+        Most passionate about open source, UX design, clean code, and bitcoin.
       </p>
       <div>
-        <BaseButton icon="ph:file-text-duotone" @click="openPdf">
+        <BaseButton icon="ph:file-text-bold" @click="openPdf">
           CV
         </BaseButton>
       </div>

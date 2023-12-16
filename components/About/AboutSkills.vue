@@ -4,11 +4,12 @@ const shownSkills = computed(() => favsOnly.value ? skills.filter(({ favorite })
 </script>
 
 <template>
-  <AboutSection title="Skills" icon="ph:toolbox-duotone">
+  <AboutSection title="Stack" icon="ph:toolbox-bold">
     <div
-      grid
       grid-cols="1 sm:2 lg:3"
       grid-rows="sm:6 lg:4"
+      grid
+      mt-2
       gap-4
     >
       <NuxtLink
