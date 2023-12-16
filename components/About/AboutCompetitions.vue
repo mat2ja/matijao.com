@@ -10,7 +10,7 @@ type Competition = {
   description: string
 }
 
-const list: Competition[] = [
+const list = [
   {
     name: 'TVZ Mc2 2021',
     nameShort: 'TVZ',
@@ -28,9 +28,9 @@ const list: Competition[] = [
     project: 'Qwiz',
     from: 'Feb 2022',
     to: 'Jun 2022',
-    description: 'Gave my best, ended up empty handed',
+    description: 'No luck this time.',
   },
-]
+] satisfies Competition[]
 </script>
 
 <template>

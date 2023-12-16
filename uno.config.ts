@@ -18,7 +18,7 @@ export default defineConfig({
       provider: 'google',
       fonts: {
         'sans': {
-          name: 'SatoshiVariable',
+          name: 'Satoshi',
           provider: 'fontshare',
         },
         'sans-italic': {

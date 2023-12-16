@@ -116,7 +116,7 @@ whenever(arrowRight, () => toNext())
             relative
           >
             <NuxtImg
-              width="1440px"
+              :width="1440"
               format="webp"
               :src="image"
               alt="Project thumbnail"

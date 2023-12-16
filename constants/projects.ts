@@ -41,7 +41,6 @@ export const projects: Project[] = [
   },
   {
     name: 'matijao.com',
-    // Homepage pre-rendered at build time
     description: 'The very website you\'re looking at right now.',
     tags: ['Nuxt', 'TypeScript', 'UnoCSS'],
     year: 2023,

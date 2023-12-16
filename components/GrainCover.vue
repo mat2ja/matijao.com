@@ -10,7 +10,7 @@
 
 .dark #grain {
   --grain-bg: url('assets/images/bg-grain-dark.png');
-  --grain-opacity: 40%;
+  --grain-opacity: 35%;
 }
 
 #grain {
