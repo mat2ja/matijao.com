@@ -6,8 +6,9 @@ const shownSkills = computed(() => favsOnly.value ? skills.filter(({ favorite })
 <template>
   <AboutSection title="Stack" icon="ph:toolbox">
     <div
-      grid-cols="1 sm:2 lg:3"
       grid
+      grid-cols="1 sm:2 lg:3"
+      auto-rows-fr
       mt-2
       gap-4
     >

@@ -12,15 +12,15 @@ const year = ref(new Date().getFullYear())
 </script>
 
 <template>
-  <footer z-100 py-8 md:py-4>
+  <footer z-100 py-4>
     <div>
       <div
         flex="~ col md:row"
-        h-22px
         items-center
         justify-between
         text-xs
         font-mono
+        md:h-22px
         text-dimmed
       >
         <div flex items-center gap-1 class="footer-statusbar" rounded-r-full>
@@ -59,20 +59,18 @@ const year = ref(new Date().getFullYear())
                 <p>{{ Math.round(temperature) }}&deg;,</p>
 
                 <p>{{ weather.description }}</p>
+
+                &middot;
               </div>
             </template>
           </template>
 
-          &middot;
-
           <p>
-            <Icon name="circle-flags:hr" text-11px />
+            <Icon name="circle-flags:hr" text-11px lt-md:hidden />
             zagreb, croatia
           </p>
 
-          <span lt-md="hidden">
-            &middot;
-          </span>
+          &middot;
 
           <p v-if="formattedTimeVisible">
             {{ formattedTime }}
