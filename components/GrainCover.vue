@@ -1,28 +1,37 @@
 <template>
-  <div id="grain" overflow="hidden" class="opacity-50 dark:opacity-20" />
+  <div id="grain" overflow="hidden" />
 </template>
 
 <style scoped lang="postcss">
 #grain {
-  background-image: url('assets/images/bg-grain.png');
-  background-repeat: repeat;
-  position: fixed;
-  width: 600%;
-  left: -200%;
-  height: 600%;
-  top: -300%;
-  animation: home-grain 12s steps(10) infinite;
-  pointer-events: none;
-  z-index: 9999;
+  --grain-bg: url('assets/images/bg-grain.png');
+  --grain-opacity: 90%;
 }
 
-.dark {
+.dark #grain {
+  --grain-bg: url('assets/images/bg-grain-dark.png');
+  --grain-opacity: 40%;
+}
+
+#grain {
+  background-image: var(--grain-bg);
+  position: fixed;
+  inset: -200%;
+  animation: grain 12s steps(10) infinite;
+  pointer-events: none;
+  z-index: 9999;
+  background-size: 350px auto;
+  opacity: var(--grain-opacity);
+}
+
+@media (prefers-reduced-motion) {
   #grain {
-    background-image: url('assets/images/bg-grain-dark.png');
+    inset: 0;
+    animation: none;
   }
 }
 
-@keyframes home-grain {
+@keyframes grain {
   0%,
   to {
     transform: translate(0);

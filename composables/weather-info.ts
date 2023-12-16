@@ -10,7 +10,13 @@ export const useWeatherInfo = async () => {
   })
   url.search = params.toString()
 
-  const { data: weatherData } = await useFetch<WeatherResponse>(url.toString())
+  const { data: weatherData, pending } = await useLazyFetch<WeatherResponse>(url.toString(), {
+    key: 'weather',
+    getCachedData(key) {
+      const app = useNuxtApp()
+      return app.static.data[key] || app.payload.data[key]
+    }
+  })
 
   const currentWeather = computed(() => {
     return weatherData.value?.current_weather
@@ -36,5 +42,6 @@ export const useWeatherInfo = async () => {
   return {
     weather: weatherDescription,
     temperature,
+    pending,
   }
 }

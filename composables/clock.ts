@@ -1,3 +1,5 @@
+import { isClient } from '@vueuse/core'
+
 export const useClock = () => {
   const now = useNow({ interval: 1000 })
 
