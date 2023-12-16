@@ -36,7 +36,7 @@ const openProject = () => {
       px-5
       py-4
       md:max-w-lg
-      class="border-2 border-default-2/40 border-default-2/40 bg-default-2/20 transition lg:translate-y-1 dark:border-default-8/40 dark:bg-default-8/40 hover:(lg:translate-y-0)"
+      class="border-2 border-default-2/50 bg-default-2/20 transition lg:translate-y-1 dark:border-default-8/40 dark:bg-default-8/40 hover:(lg:translate-y-0)"
       @click="openProject"
     >
       <div flex flex-1 flex-col gap-2>

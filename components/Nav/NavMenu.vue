@@ -40,6 +40,6 @@ const isLinkActive = (item: NavItem) => {
 
 <style lang="postcss" scoped>
 .link-active {
-  @apply bg-default-2/40 dark:bg-default-8 !text-primary;
+  @apply bg-default-2/60 dark:bg-default-8 !text-primary;
 }
 </style>

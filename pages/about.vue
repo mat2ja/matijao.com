@@ -9,7 +9,7 @@
 
       <AboutWork />
 
-      <div class="border-2 border-default-2/40 border-default-2/40 bg-default-2/20 dark:border-default-8/40 dark:bg-default-8/40" rounded-2xl p-6 md:p-8>
+      <div class="border-2 border-default-2/50 bg-default-2/30 dark:border-default-8/40 dark:bg-default-8/40" rounded-2xl p-6 md:p-8>
         <AboutCompetitions />
       </div>
 

@@ -68,9 +68,9 @@ withDefaults(defineProps<{
   @apply transition;
 
   &.default {
-    @apply bg-[#EFEEED] dark:bg-default-8;
+    @apply bg-default-2/60 dark:bg-default-8;
     @apply text-default-8 dark:text-default-2;
-    @apply hover:(ring-2 ring-default-2 dark:ring-default-7);
+    @apply hover:(ring-2 ring-default-3 dark:ring-default-7);
   }
 
   &.primary {

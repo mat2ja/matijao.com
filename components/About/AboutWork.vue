@@ -52,7 +52,6 @@ const calculateDuration = (from: Date, to: Date | null) => {
             external
             transition
             hyperlink-wavy
-
             :class="{ 'decoration-current dark:decoration-accent': i === 0 }"
           >
             {{ job.company.name }}

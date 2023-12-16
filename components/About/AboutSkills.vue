@@ -7,7 +7,6 @@ const shownSkills = computed(() => favsOnly.value ? skills.filter(({ favorite })
   <AboutSection title="Stack" icon="ph:toolbox">
     <div
       grid-cols="1 sm:2 lg:3"
-      grid-rows="sm:6 lg:4"
       grid
       mt-2
       gap-4
@@ -29,7 +28,7 @@ const shownSkills = computed(() => favsOnly.value ? skills.filter(({ favorite })
           text-center
           transition-all
           duration-300
-          class="border-2 border-default-2/40 bg-default-50 backdrop-blur-md backdrop-blur-md dark:(border-default-8/40 bg-default-8/40) hover:(-translate-y-1)"
+          class="border-2 border-default-2/50 bg-default-2/20 backdrop-blur-md backdrop-blur-md dark:(border-default-8/40 bg-default-8/40) hover:(-translate-y-1)"
         >
           <div flex flex-col items-center justify-center gap-6>
             <Icon shrink-0 :name="item.icon" text-5xl />
