@@ -45,9 +45,11 @@ export default defineNuxtConfig({
     ],
   },
 
+  // routeRules: {
+  //   '/**': { prerender: true },
+  // },
+
   css: [
-    '~/assets/styles/palmtick.css',
-    '~/assets/styles/geist.css',
     '~/assets/styles/style.css',
   ],
 

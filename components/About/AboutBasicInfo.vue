@@ -19,7 +19,7 @@ const openPdf = () => {
         Most passionate about open source, UX design, clean code, and bitcoin.
       </p>
       <div>
-        <BaseButton icon="ph:file-text-bold" @click="openPdf">
+        <BaseButton icon="ph:file-text" @click="openPdf">
           CV
         </BaseButton>
       </div>

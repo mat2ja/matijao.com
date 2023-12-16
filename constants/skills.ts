@@ -20,7 +20,7 @@ export const skills = [
     value: 'typescript',
     icon: 'logos:typescript-icon',
     favorite: true,
-    desc: 'JavaScript that scales',
+    desc: 'JavaScript with types',
     url: 'https://www.typescriptlang.org',
   },
   {

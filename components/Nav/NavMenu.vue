@@ -26,7 +26,6 @@ const isLinkActive = (item: NavItem) => {
         px-2.5
         py-1
         lowercase
-        transition
         class="text-default-4 dark:text-default-5 hover:(text-primary)"
         :class="{
           'link-active': isLinkActive(item),

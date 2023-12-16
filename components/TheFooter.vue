@@ -67,20 +67,22 @@ const year = ref(new Date().getFullYear())
 
         &middot;
 
-        <button
-          flex
-          cursor-pointer
-          items-center
-          pr-1
-          text-sm
-          hover:opacity-100
-          @click="toggleDark"
-        >
-          <Icon v-show="!isDark" name="ph:moon-bold" />
-          <Icon v-show="isDark" name="ph:sun-bold" />
-        </button>
+        <div flex items-center gap-2>
+          <button
+            flex
+            cursor-pointer
+            items-center
+            pr-1
+            text-sm
+            hover:opacity-100
+            @click="toggleDark"
+          >
+            <Icon v-show="!isDark" name="ph:moon-fill" />
+            <Icon v-show="isDark" name="ph:sun-fill" />
+          </button>
 
-        <Icon name="logos:nuxt-icon" text-sm />
+          <Icon name="logos:nuxt-icon" class="text-16px" />
+        </div>
       </div>
     </div>
   </footer>

@@ -34,7 +34,7 @@ const list: Competition[] = [
 </script>
 
 <template>
-  <AboutSection title="Competitions" icon="ph:trophy-bold">
+  <AboutSection title="Competitions" icon="ph:trophy">
     <div relative flex items-center justify-between>
       <div z-2 space-y-6>
         <div v-for="(item, i) in list" :key="i" flex flex-col gap-1>

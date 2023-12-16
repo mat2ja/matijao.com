@@ -1,7 +1,0 @@
-@font-face {
-  font-family: palmtick;
-  font-style: normal;
-  font-weight: 400;
-  src: local('palmtick'), url('/fonts/Palmtick.woff') format('woff');
-  font-display: swap;
-}

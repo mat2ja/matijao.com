@@ -4,7 +4,7 @@ export const socials: Record<string, SocialLink> = {
   github: {
     label: 'GitHub',
     username: '@matijaoe',
-    icon: 'ph:github-logo-duotone',
+    icon: 'ph:github-logo',
     href: 'https://github.com/matijaoe',
     color: '#171515',
     colorDark: '#fafaf9',
@@ -12,21 +12,21 @@ export const socials: Record<string, SocialLink> = {
   twitter: {
     label: 'Twitter',
     username: '@matijaoe',
-    icon: 'ph:twitter-logo-duotone',
+    icon: 'ph:twitter-logo',
     href: 'https://twitter.com/matijaoe',
     color: '#1F9CEA',
   },
   linkedin: {
     label: 'LinkedIn',
     username: '@matijao',
-    icon: 'ph:linkedin-logo-duotone',
+    icon: 'ph:linkedin-logo',
     href: 'https://linkedin.com/in/matijao',
     color: '#0277B5',
   },
   email: {
     label: 'Email',
     username: 'hello@matijao.com',
-    icon: 'ph:envelope-duotone',
+    icon: 'ph:envelope',
     href: 'mailto:hello@matijao.com',
     color: '#DB4437',
   },
@@ -40,7 +40,7 @@ export const socials: Record<string, SocialLink> = {
   goodreads: {
     label: 'Goodreads',
     username: '@matijao',
-    icon: 'ph:goodreads-logo-duotone',
+    icon: 'ph:goodreads-logo',
     href: 'https://www.goodreads.com/matijao',
     color: '#372212',
     colorDark: '#EEECDD',

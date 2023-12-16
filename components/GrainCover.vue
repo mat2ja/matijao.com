@@ -1,5 +1,5 @@
 <template>
-  <div id="grain" overflow="hidden" class="opacity-45 dark:opacity-15" />
+  <div id="grain" overflow="hidden" class="opacity-50 dark:opacity-20" />
 </template>
 
 <style scoped lang="postcss">
@@ -11,7 +11,7 @@
   left: -200%;
   height: 600%;
   top: -300%;
-  animation: home-grain 14s steps(10) infinite;
+  animation: home-grain 12s steps(10) infinite;
   pointer-events: none;
   z-index: 9999;
 }

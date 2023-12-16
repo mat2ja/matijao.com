@@ -31,7 +31,7 @@ const calculateDuration = (from: Date, to: Date | null) => {
 </script>
 
 <template>
-  <AboutSection title="Work" icon="ph:briefcase-bold">
+  <AboutSection title="Work" icon="ph:briefcase">
     <div z-2 space-y-6>
       <div
         v-for="(job, i) in jobs"

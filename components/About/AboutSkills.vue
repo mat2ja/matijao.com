@@ -4,7 +4,7 @@ const shownSkills = computed(() => favsOnly.value ? skills.filter(({ favorite })
 </script>
 
 <template>
-  <AboutSection title="Stack" icon="ph:toolbox-bold">
+  <AboutSection title="Stack" icon="ph:toolbox">
     <div
       grid-cols="1 sm:2 lg:3"
       grid-rows="sm:6 lg:4"

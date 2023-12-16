@@ -43,7 +43,7 @@ whenever(arrowRight, () => toNext())
   <div v-if="project" class="md:mt--60px">
     <div>
       <div flex items-center justify-between>
-        <BaseButton ml--3 icon="ph:arrow-left-bold" variant="blank" @click="navigateTo({ name: 'projects' })">
+        <BaseButton ml--3 icon="ph:arrow-left" variant="blank" @click="navigateTo({ name: 'projects' })">
           Back
         </BaseButton>
 
@@ -53,7 +53,7 @@ whenever(arrowRight, () => toNext())
             :to="project.repo"
             external
             new-tab
-            icon="ph:code-bold"
+            icon="ph:code"
             icon-position="right"
           >
             Code
@@ -63,7 +63,7 @@ whenever(arrowRight, () => toNext())
             :to="project.url"
             external
             new-tab
-            icon="ph:arrow-up-right-bold"
+            icon="ph:arrow-up-right"
             icon-position="right"
             variant="primary"
           >

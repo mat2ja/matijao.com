@@ -11,14 +11,14 @@ const socialLinks = [socials.github, socials.linkedin, socials.twitter, socials.
   <div>
     <div lt-md:mt-8vh>
       <div relative w-full>
-        <h2 mb="3 sm:5" class="md:text-5.75rem" slide-enter text-4xl font-800 font-display italic sm:text-5xl>
+        <h2 mb="3 sm:5" class="text-5xl md:text-5.75rem" slide-enter font-800 font-display italic sm:text-5xl>
           I'm <span class="my-name text-accent">Matija</span>
         </h2>
         <SVGCloud absolute pos="top--50 right--15 sm:(top--50 right--15) md:(top--55 right--15)" z--1 />
       </div>
 
-      <p mb="5 sm:6" class="md:text-2xl" slide-enter text-4xl font-900 italic sm:text-5xl>
-        I punch codes into computer until thing does the thing
+      <p mb="5 sm:6" class="md:text-2xl" slide-enter max-w-sm text-4xl font-900 italic sm:text-5xl>
+        I punch codes into computer<wbr> until thing does the thing
       </p>
 
       <div slide-enter max-text>
@@ -76,5 +76,9 @@ const socialLinks = [socials.github, socials.linkedin, socials.twitter, socials.
 .light .my-name {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #262626;
+
+  @media (width < 768px) {
+    -webkit-text-stroke-width: 2px;
+  }
 }
 </style>
