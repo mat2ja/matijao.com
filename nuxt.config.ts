@@ -14,9 +14,9 @@ export default defineNuxtConfig({
   ],
 
   vue: {
-    defineModel: true,
     propsDestructure: true,
   },
+
   experimental: {
     typedPages: true,
   },
