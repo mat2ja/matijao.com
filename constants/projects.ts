@@ -6,7 +6,7 @@ export const projects: Project[] = [
     description: 'Application for tracking personal finances and attaining financial independence.',
     tags: ['Nuxt', 'TypeScript', 'UnoCSS', 'Prisma'],
     year: 2022,
-    repo: 'https://github.com/matijaoe/fire-zavrsni',
+    repo: 'https://github.com/matijaoe/fare',
     thumbnail: '/projects/fare.webp',
     categories: ['projects'],
   },
