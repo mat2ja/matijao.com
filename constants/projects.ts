@@ -31,6 +31,16 @@ export const projects: Project[] = [
     categories: ['projects'],
   },
   {
+    name: 'Wordware',
+    description: 'Sleek passphrase generator and wordlist manager.',
+    tags: ['Nuxt', 'TypeScript', 'Shadcn', 'Tailwind'],
+    year: 2024,
+    repo: 'https://github.com/matijaoe/wordware',
+    url: 'https://wordware.vercel.app/',
+    thumbnail: '/projects/wordware-dark.webp',
+    categories: ['projects'],
+  },
+  {
     wip: true,
     name: 'Polenta',
     description: 'Advanced Bitcoin wallet management',

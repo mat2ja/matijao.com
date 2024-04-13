@@ -5,6 +5,11 @@ useGlobalShortcuts()
 <template>
   <Html lang="en">
     <Body min-h-screen bg-default-100 font-sans dark:bg-default-9 text-primary>
+      <div class="bg-accent py-2 text-center text-default-9 font-medium">
+        <p class="row">
+          Revamped website almost ready, coming out <span italic>very</span> soon!
+        </p>
+      </div>
       <GrainCover />
       <NuxtLayout min-h-screen>
         <NuxtPage />
