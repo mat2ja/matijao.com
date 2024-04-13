@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import ResumePDF from '/Resume.pdf'
+import CV from '/cv.pdf'
 import { isClient } from '@vueuse/core'
 
 const openPdf = () => {
   if (isClient) {
-    window.open(ResumePDF, '_blank')
+    window.open(CV, '_blank')
   }
 }
 </script>
