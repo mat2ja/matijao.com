@@ -7,9 +7,9 @@ useGlobalShortcuts()
     <Body min-h-screen bg-default-100 font-sans dark:bg-default-9 text-primary>
       <div class="bg-accent py-2 text-center text-default-9 font-medium">
         <p class="row">
-          Completely new site coming out soon! Preview it at <NuxtLink class="underline" to="https://new.matijao.com" external>
-            {{ }}new.matijao.com{{ }}
-          </NuxtLink>.
+          New site at <NuxtLink class="underline" to="https://matijao.com" external>
+            {{ }}matijao.com{{ }}
+          </NuxtLink>
         </p>
       </div>
       <GrainCover />
